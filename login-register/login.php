@@ -11,14 +11,14 @@
 <body>
     <center><h1>WWW.LOMBAWEB.COM</h1></center>
     <div class="login">
-    <form action="proses-login.php" method="POST" onSubmit="return validasi()">
+    <form action="proses-login.php" method="POST">
         <div>
             <label for="username">Username : </label>
-            <input type="text" name="username" placeholder="input username or email" id="username">
+            <input type="text" name="username" placeholder="input username or email" id="username" required>
         </div>
         <div>
             <label for="password">Password : </label>
-            <input type="password" name="password" placeholder="input password" id="password">
+            <input type="password" name="password" placeholder="input password" id="password" required>
         </div>
         <div>
         <input type="submit" name="login" value="masuk" class="tombol"></p>

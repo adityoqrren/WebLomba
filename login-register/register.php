@@ -15,9 +15,9 @@
 
     <form action="proses-register.php" method="POST">
         <div><label for="name">Name : </label>
-        <input type="text" name="name" placeholder="input name"></div>
+        <input type="text" name="name" placeholder="input name" required></div>
         <div><label for="email">Email : </label>
-        <input type="text" name="email" placeholder="input email"></div>
+        <input type="text" name="email" placeholder="input email" required></div>
         <div><label for="tgllahir">Tanggal Lahir : </label><br>
         <select name="tgl">
             <?php 
@@ -42,10 +42,10 @@
         </select>
         </div>
         <div><label for="username">Username : </label>
-        <input type="text" name="username" placeholder="input username">
+        <input type="text" name="username" placeholder="input username" required>
         </div>
         <div><label for="password">Password : </label>
-        <input type="password" name="password" placeholder="input password">
+        <input type="password" name="password" placeholder="input password" required>
         </div>
         <div><input type="submit" name="register" value="Sign Up" class="tombol"></div>
 
