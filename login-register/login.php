@@ -5,28 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/smain.js"></script>
 </head>
 <body>
-    <h2>Login to our website</h2>
-    <p>Don't have account?<a href="register.php">Sign Up</a></p>
-    <form action="proses-login.php" method="POST">
-        <p><label for="username">Username : </label>
-        <input type="text" name="username" placeholder="input username or email"></p>
-        <p><label for="password">Password : </label>
-        <input type="password" name="password" placeholder="input password"></p>
-        <p><input type="submit" name="login" value="masuk"></p>
+    <center><h1>WWW.LOMBAWEB.COM</h1></center>
+    <div class="login">
+    <form action="proses-login.php" method="POST" onSubmit="return validasi()">
+        <div>
+            <label for="username">Username : </label>
+            <input type="text" name="username" placeholder="input username or email" id="username">
+        </div>
+        <div>
+            <label for="password">Password : </label>
+            <input type="password" name="password" placeholder="input password" id="password">
+        </div>
+        <div>
+        <input type="submit" name="login" value="masuk" class="tombol"></p>
+        </div>
+        <div>
+        Don't have account?<a href="register.php">Sign Up</a>
+        </div>
     </form>
+    </div>
+    
     <?php
             if(isset($_GET['status'])){
                 if($_GET['status']=="password"){
-                    echo "<p>Login Fail! Wrong Password</p>";
+                    echo "<script>alert('Wrong Password')</script>";
                 }else{
-                    echo "<p>Login Fail! Your Username or Email not registered</p>";
+                    echo "<script>alert('Wrong Username or Email')</script>";
                 }
                 
             }
         ?>
+
 </body>
 </html>
