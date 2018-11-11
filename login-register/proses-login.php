@@ -17,7 +17,7 @@
                 session_start();
                 $_SESSION["user"]= $user;
                 //login sukses
-                header("Location: timeline.php");
+                header("Location: ../ezuca/index.php");
             }else{
                 header("Location: login.php?status=password");
             }
