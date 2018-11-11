@@ -8,13 +8,13 @@
     <meta name="author" content="">
     <title>Register</title>
     <!-- Bootstrap core CSS-->
-    <link href="../admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
-    <link href="../admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
-    <link href="../admin/css/sb-admin.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
 </head>
 <body class="bg-dark">
  
@@ -117,8 +117,8 @@
           
       </div>
   </div>
-  <script src="../admin/vendor/jquery/jquery.min.js"></script>
-    <script src="../admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script> 

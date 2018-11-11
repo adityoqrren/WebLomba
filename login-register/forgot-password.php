@@ -12,13 +12,13 @@
     <title>SB Admin - Forgot Password</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="../admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
-    <link href="../admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
-    <link href="../admin/css/sb-admin.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
 
   </head>
 
