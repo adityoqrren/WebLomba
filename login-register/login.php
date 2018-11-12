@@ -30,17 +30,11 @@
         <div class="card-header">Login</div>
         <div class="card-body">
           <form action="proses-login.php" method="POST">
-          <div class="form-group"  >
-                            <div class="form-label-group">
-                                <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Username or Email" required="required" autofocus="autofocus">
-                                <label for="inputEmail">Username or Email</label>
-                            </div>
-                            </div>
-            <div class="form-group">
-              <div class="form-label-group">
+            <div class="form-group"  >
+                <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Username or Email" required="required">
+            </div>
+            <div class="form-group">          
                 <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
-                <label for="inputPassword">Password</label>
-              </div>
             </div>
             <div class="form-group">
               <div class="checkbox">
@@ -50,7 +44,7 @@
                 </label>
               </div>
             </div>
-            <input class="btn btn-primary btn-block" type="submit" value="login" name="login" >
+            <input class="btn btn-block mybutton" type="submit" value="login" name="login" >
           </form>
           <div class="text-center">
             <a class="d-block small mt-3" href="register.php">Register an Account</a>
@@ -66,7 +60,7 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    
+
     <?php
             if(isset($_GET['status'])){
                 if($_GET['status']=="password"){
@@ -74,7 +68,7 @@
                 }else{
                     echo "<script>alert('Wrong Username or Email')</script>";
                 }
-                
+
             }
         ?>
 
