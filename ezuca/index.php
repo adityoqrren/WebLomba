@@ -1,6 +1,6 @@
 <?php
-session_start();
-if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");
+/*session_start();
+if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -381,7 +381,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");
                 </div><!-- .col -->
 
                 <div class="col-12 px-25 flex justify-content-center">
-                    <a class="btn" href="#">view all courses</a>
+                    <a class="btn" href="courses.php">view all courses</a>
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->
@@ -534,32 +534,32 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");
         </div><!-- .gallery-wrap
     </section><!-- .home-gallery -->
 
-    <div class="clients-logo">
+    <!--<div class="clients-logo">
         <div class="container">
             <div class="row">
                 <div class="col-12 flex flex-wrap justify-content-center justify-content-lg-between align-items-center">
                     <div class="logo-wrap">
                         <img src="images/logo-1.png" alt="">
-                    </div><!-- .logo-wrap -->
+                    </div><!-- .logo-wrap
 
                     <div class="logo-wrap">
                         <img src="images/logo-2.png" alt="">
-                    </div><!-- .logo-wrap -->
+                    </div><!-- .logo-wrap
 
                     <div class="logo-wrap">
                         <img src="images/logo-3.png" alt="">
-                    </div><!-- .logo-wrap -->
+                    </div><!-- .logo-wrap
 
                     <div class="logo-wrap">
                         <img src="images/logo-4.png" alt="">
-                    </div><!-- .logo-wrap -->
+                    </div><!-- .logo-wrap
 
                     <div class="logo-wrap">
                         <img src="images/logo-5.png" alt="">
-                    </div><!-- .logo-wrap -->
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .container -->
+                    </div><!-- .logo-wrap
+                </div><!-- .col
+            </div><!-- .row
+        </div><!-- .container
     </div><!-- .clients-logo -->
 
     <footer class="site-footer">

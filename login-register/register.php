@@ -21,16 +21,16 @@
     <link href="css/sb-admin.css" rel="stylesheet">
 </head>
 <body class="bg-dark">
- 
+
 <div class="container"><!-- container class is used to centered  the body of the browser with some decent width-->
       <div class="card card-register mx-auto mt-5"><!-- row class is used for grid system in Bootstrap-->
-          
+
               <div class="login-panel panel panel-success">
               <div class="card-header">Register an Account</div>
                   <div class="card-body">
- 
+
                       <form role="form" action="proses-register.php" method="POST" >
-                          
+
                             <div class="form-group">
                             <div class="form-row">
                             <div class="col-md-6">
@@ -38,7 +38,7 @@
                                 <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
                                 <label for="firstName">First name</label>
                             </div>
-                            </div> 
+                            </div>
                             <div class="col-md-6">
                              <div class="form-label-group">
                                 <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last name" required="required">
@@ -63,22 +63,22 @@
                               <div class="form-label-group">
                                 <div><label for="tgllahir">   Tanggal Lahir : </label></div>
                                     <select name="tgl" class="form-control">
-                                        <?php 
-                                            for ($i=1; $i <=31 ; $i++) { 
+                                        <?php
+                                            for ($i=1; $i <=31 ; $i++) {
                                                 echo "<option value=$i>$i</option>";
                                             }
                                         ?>
                                     </select>
                                     <select name="bln" class="form-control">
-                                        <?php 
-                                            for ($i=1; $i <=12 ; $i++) { 
+                                        <?php
+                                            for ($i=1; $i <=12 ; $i++) {
                                                 echo "<option value=$i>$i</option>";
                                             }
                                         ?>
                                     </select>
                                     <select name="thn" class="form-control">
-                                        <?php 
-                                            for ($i=2019; $i >=1900 ; $i--) { 
+                                        <?php
+                                            for ($i=2019; $i >=1900 ; $i--) {
                                                 echo "<option value=$i>$i</option>";
                                             }
                                         ?>
@@ -101,32 +101,32 @@
                             </div>
                             </div>
                             </div>
- 
+
                               <!-- <div class="form-group">
                                   <input class="form-control" placeholder="Age" name="user_age" type="number" value="">
                               </div> -->
- 
+
                               <div class="form-group">
                                   <input class="form-control" name="no_hp" placeholder="Mobile No" name="no_hp" type="number" value="">
                               </div>
- 
-                              <input class="btn btn-primary btn-block" type="submit" value="Register" name="register" >
+
+                              <input class="btn mybutton btn-block" type="submit" value="Register" name="register" >
                       </form>
                       <div class="text-center">
                     <a class="d-block small mt-3" href="login.php">Login Page</a>
                     <a class="d-block small" href="forgot-password.php">Forgot Password?</a>
-                    </div> 
+                    </div>
                   </div>
               </div>
-          
+
       </div>
   </div>
   <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script> 
-        
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
 
         <?php
             if(isset($_GET['status'])){
@@ -139,6 +139,6 @@
                 }
             }
         ?>
-    
+
 </body>
 </html>

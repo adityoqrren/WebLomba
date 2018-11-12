@@ -279,6 +279,10 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
   --input-padding-y: 0.75rem;
 }
 
+.mybutton{
+  background-color: #F9D633;
+}
+
 .card-login {
   max-width: 25rem;
 }
@@ -297,21 +301,21 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
   height: auto;
 }
 
-.form-label-group > label {
+/*.form-label-group > label {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
   width: 100%;
   margin-bottom: 0;
-  /* Override default `<label>` margin */
+  /* Override default `<label>` margin 
   line-height: 1.5;
   color: #495057;
   border: 1px solid transparent;
   border-radius: 0.25rem;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-}
+}*/
 
 .form-label-group input::-webkit-input-placeholder {
   color: transparent;
