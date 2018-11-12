@@ -12,14 +12,16 @@
             <span>Pages</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="login.html">Login</a>
-            <a class="dropdown-item" href="register.html">Register</a>
-            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+            <h6 class="dropdown-header">Crud:</h6>
+            <a class="dropdown-item" href="curriculum/index.php">Curriculum</a>
+            <a class="dropdown-item" href="materi/index.php">Materi</a>
+            <a class="dropdown-item" href="soal/index.php">Soal</a>
+            <a class="dropdown-item" href="answer/index.php">Jawaban</a>
+            <a class="dropdown-item" href="blog/index.php">Blog</a>
             <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="404.html">404 Page</a>
-            <a class="dropdown-item" href="blank.html">Blank Page</a>
+            <h6 class="dropdown-header">Member:</h6>
+            <a class="dropdown-item" href="user/index.html">User</a>
+            
           </div>
         </li>
         <li class="nav-item">
