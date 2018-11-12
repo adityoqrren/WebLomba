@@ -1,4 +1,5 @@
-<?php require_once("auth.php") ?>
+<?php require_once("auth.php");
+include("config.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include("partials/head.php") ?>
@@ -28,40 +29,57 @@
           <!-- DataTables Example -->
           <div class="card mb-3">
             <div class="card-header">
-              <i class="fas fa-table"></i>
-              Data Table Example</div>
+              <a href="course/new_form.php"><i class="fas fa-plus"></i> Add New</a>
+            </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
+                      <th>Title</th>
+                      <th>Description</th>
+                      <th>Author</th>
+                      <th>Create</th>
+                      <th>Photo</th>
+                      <th>Tindakan</th>
+                      
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
+                      <th>Title</th>
+                      <th>Description</th>
+                      <th>Author</th>
+                      <th>Create</th>
+                      <th>Photo</th>
+                      <th>Tindakan</th>
+                      
                     </tr>
                   </tfoot>
                   <tbody>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011/04/25</td>
-                      <td>$320,800</td>
-                    </tr>
+                    <?php
+                        $sql = $db->query("select * from course");
+                        
+                        while ($value = $sql->fetch(PDO::FETCH_ASSOC)) {
+                          
+                            echo "<tr>";
+                
+                            echo "<td>".$value['title']."</td>";
+                            echo "<td>".$value['description']."</td>";
+                            echo "<td>".$value['author']."</td>";
+                            echo "<td>".$value['create_date']."</td>";
+                            echo "<td>".$value['photo']."</td>";
+                
+                            echo "<td>";
+                            echo "<a href='course/form-edit.php?id=".$value['id_course']."'>Edit</a> | ";
+                            echo "<a href='course/hapus.php?id=".$value['id_course']."'>Hapus</a>";
+                            echo "</td>";
+                
+                            echo "</tr>";
+                        }
+                        
+                    ?>
+                    
                     
                   </tbody>
                 </table>
