@@ -4,13 +4,13 @@
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="foot-about">
-                        <a class="foot-logo" href="#"><img src="images/foot-logo.png" alt=""></a>
+                        <a class="foot-logo" href="#"><img style="width:50%;" src="images/logo-polsri.png" alt=""></a>
 
                         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. </p>
 
-                        <p class="footer-copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                      <!--  <p class="footer-copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. </p>-->
                     </div><!-- .foot-about -->
                 </div><!-- .col -->
 
@@ -83,6 +83,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     </div><!-- .footer-bar-nav
                 </div><!-- .col-12
             </div><!-- .row
-        </div><!-- .container 
+        </div><!-- .container
     </div><!-- .footer-bar -->
 </footer><!-- .site-footer -->
