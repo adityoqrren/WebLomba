@@ -21,10 +21,24 @@
                     </div><!-- .header-bar-search -->
 
                     <div class="header-bar-menu">
+                        <?php
+                            session_start();
+                            if(!isset($_SESSION["user"])){
+                        ?>
                         <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
                             <li><a href="#">Register</a></li>
                             <li><a href="#">Login</a></li>
                         </ul>
+                        <?php 
+                            }else{
+                               ?>
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                <li><a href="#"><?php echo $_SESSION["user"]["name"];  ?></a></li>
+                                </ul>
+
+                               <?php
+                            }
+                        ?>
                     </div><!-- .header-bar-menu -->
                 </div><!-- .col -->
             </div><!-- .row -->
