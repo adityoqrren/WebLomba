@@ -1145,13 +1145,13 @@ a.btn:hover {
 # Clients Logos
 --------------------------------*/
 .clients-logo {
-    margin-top: 100px;
     padding: 16px 0;
-    background: #f7f7f7;
+    background: var(--maincolor);
 }
 
-.logo-wrap {
-    margin: 16px;
+
+.logo-wrap img{
+  width: 100px!important;
 }
 
 /*--------------------------------------------------------------
