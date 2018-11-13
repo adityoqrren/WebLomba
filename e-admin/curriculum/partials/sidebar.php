@@ -1,7 +1,7 @@
 <!-- Sidebar -->
 <ul class="sidebar navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="index.php">
+          <a class="nav-link" href="../index.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
           </a>
@@ -13,14 +13,14 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Crud:</h6>
-            <a class="dropdown-item" href="curriculum/index.php">Curriculum</a>
-            <a class="dropdown-item" href="materi/index.php">Materi</a>
-            <a class="dropdown-item" href="soal/index.php">Soal</a>
-            <a class="dropdown-item" href="answer/index.php">Jawaban</a>
-            <a class="dropdown-item" href="blog/index.php">Blog</a>
+            <a class="dropdown-item" href="../curriculum/index.php">Curriculum</a>
+            <a class="dropdown-item" href="../materi/index.php">Materi</a>
+            <a class="dropdown-item" href="../soal/index.php">Soal</a>
+            <a class="dropdown-item" href="../answer/index.php">Jawaban</a>
+            <a class="dropdown-item" href="../blog/index.php">Blog</a>
             <div class="dropdown-divider"></div>
             <h6 class="dropdown-header">Member:</h6>
-            <a class="dropdown-item" href="user/index.php">User</a>
+            <a class="dropdown-item" href="../user/index.php">User</a>
             
           </div>
         </li>

@@ -5,10 +5,10 @@
 
 <body id="page-top">
 
-	<?php include("../partials/navbar.php") ?>
+	<?php include("partials/navbar.php") ?>
 	<div id="wrapper">
 
-		<?php include("../partials/sidebar.php") ?>
+		<?php include("partials/sidebar.php") ?>
 
 		<div id="content-wrapper">
 
@@ -19,7 +19,9 @@
                     <li class="breadcrumb-item">
                         <a href="../index.php">Dashboard</a>
                     </li>
-                    <li class="breadcrumb-item active">Materi</li>
+                    <li class="breadcrumb-item">
+                        <a href="index.php">Materi</a>
+                    </li>
                     <li class="breadcrumb-item active">Edit Materi</li>
                 </ol>
 
@@ -37,7 +39,7 @@
 				<div class="card mb-3">
 					<div class="card-header">
 
-						<a href="../index.php"><i class="fas fa-arrow-left"></i> Back</a>
+						<a href="index.php"><i class="fas fa-arrow-left"></i> Back</a>
                     </div>
                     
                     <?php
@@ -132,7 +134,7 @@
 				<!-- /.container-fluid -->
 
 				<!-- Sticky Footer -->
-				<?php $this->load->view("admin/_partials/footer.php") ?>
+				<?php include("../partials/footer.php") ?>
 
 			</div>
 			<!-- /.content-wrapper -->
@@ -140,9 +142,9 @@
 		</div>
 		<!-- /#wrapper -->
 
-		<?php $this->load->view("admin/_partials/scrolltop.php") ?>
+		<?php include("../partials/scrolltop.php") ?>
 
-		<?php $this->load->view("admin/_partials/js.php") ?>
+		<?php include("partials/js.php") ?>
 
 </body>
 

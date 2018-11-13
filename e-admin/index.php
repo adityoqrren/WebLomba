@@ -19,10 +19,7 @@ include("config.php") ?>
 
           <!-- Breadcrumbs-->
           <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="#">Dashboard</a>
-            </li>
-            <li class="breadcrumb-item active">Course</li>
+            <li class="breadcrumb-item active">Dashboard</li>
           </ol>
 
          
@@ -68,7 +65,7 @@ include("config.php") ?>
                             echo "<td>".$value['description']."</td>";
                             echo "<td>".$value['author']."</td>";
                             echo "<td>".$value['create_date']."</td>";
-                            echo "<td>".$value['photo']."</td>";
+                            echo "<td><img src=../images/".$value['photo']." width='64'></td>";
                 
                             echo "<td>";
                             echo "<a href='course/form-edit.php?id=".$value['id_course']."'>Edit</a> | ";

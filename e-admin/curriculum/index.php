@@ -1,4 +1,4 @@
-<?php require_once("../auth.php");
+<?php 
 include("../config.php") ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,11 +7,11 @@ include("../config.php") ?>
 
   <body id="page-top">
 
-    <?php include("../partials/navbar.php") ?>
+    <?php include("partials/navbar.php") ?>
 
     <div id="wrapper">
 
-      <?php include("../partials/sidebar.php") ?>
+      <?php include("partials/sidebar.php") ?>
 
       <div id="content-wrapper">
 
@@ -97,7 +97,7 @@ include("../config.php") ?>
     <!-- Logout Modal-->
     <?php include("../partials/modal.php") ?>
 
-    <?php include("../partials/js.php") ?>
+    <?php include("partials/js.php") ?>
 
   </body>
 

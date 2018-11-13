@@ -9,14 +9,22 @@
         $bln = $_POST['bln'];
         $thn = $_POST['thn'];
         $date = $thn."-".$bln."-".$tgl;
-        $photo = $_POST['photo'];
+        $$photo = $_FILES['photo']['name'];
+        $tempPho = $_FILES['photo']['tmp_name'];
+        $imageSize = $_FILES['photo']['size'];
+        $dir = "../../images/";
+
+        $imgExt = strtolower(pathinfo($photo,PATHINFO_EXTENSION));
+        $valid_extensions = array('jpeg','jpg','png','gif');
+        $pic = rand(1000,1000000).".".$imgExt;
+        $terupload = move_uploaded_file($tempPho,$dir.$pic);
         
 
             $sql = "insert into blog values(null,:title,:description,:author,:date,:isi,:photo)";
             $stmt = $db->prepare($sql);
 
             //bind paramater ke query
-            $params = [":title"=>$title,":description"=>$description,":date"=>$date,":photo"=>$photo,":isi"=>$isi,":author"=>$author];
+            $params = [":title"=>$title,":description"=>$description,":date"=>$date,":photo"=>$pic,":isi"=>$isi,":author"=>$author];
         
             //eksekusi query untuk menyimpan ke database
             $saved = $stmt->execute($params);

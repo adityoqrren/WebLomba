@@ -7,7 +7,7 @@
         $params = [":id" => $id];
         $stmt->execute($params);
         if($stmt){
-            header('location: ../index.php');
+            header('location: index.php');
         }else{
            die('gagal menghapus'); 
         }

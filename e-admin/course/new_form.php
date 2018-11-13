@@ -6,10 +6,10 @@
 
 <body id="page-top">
 
-	<?php include("../partials/navbar.php") ?>
+	<?php include("partials/navbar.php") ?>
 	<div id="wrapper">
 
-		<?php include("../partials/sidebar.php") ?>
+		<?php include("partials/sidebar.php") ?>
 
 		<div id="content-wrapper">
 
@@ -20,7 +20,6 @@
                     <li class="breadcrumb-item">
                         <a href="../index.php">Dashboard</a>
                     </li>
-                    <li class="breadcrumb-item active">Overview</li>
                     <li class="breadcrumb-item active">New Course</li>
                 </ol>
 
