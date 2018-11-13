@@ -19,8 +19,8 @@
                     <li class="breadcrumb-item">
                         <a href="../index.php">Dashboard</a>
                     </li>
-                    <li class="breadcrumb-item active">Overview</li>
-                    <li class="breadcrumb-item active">Edit Curriculum</li>
+                    <li class="breadcrumb-item active">Soal</li>
+                    <li class="breadcrumb-item active">Edit Soal</li>
                 </ol>
 
 				<?php if ($_GET['status']=="sukses"){ ?>
@@ -42,30 +42,40 @@
                     
                     <?php
 						$id = $_GET['id'];
-						$sql = $db->query("select course.title as judul,course.id_course,curriculum.* from curriculum inner join course on id_course = course_id where id_cur = $id");
+						$sql = $db->query("select * from jawaban inner join soal on jawaban.id_soal = soal.id_soal where id_pil = $id");
                         $value = $sql->fetch(PDO::FETCH_ASSOC);
                     ?>
 
 					<div class="card-body">
                         <form action="proses-edit.php" method="post" enctype="multipart/form-data" >
                         <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-						<div class="form-group">
-								<label for="title">Title*</label>
-								<input class="form-control "
-								 type="text" name="title" placeholder="Curriculum Title" value="<?php echo $value['title']; ?>"/>
+
+							<div class="form-group">
+								<label for="updated_at">Pilihan*</label>
+								<select class="form-control "
+								 name="pilihan" value="<?php echo $value['pil']; ?>">
+                                     <option value="a">a</option>
+                                     <option value="b">b</option>
+                                     <option value="c">c</option>
+                                     <option value="d">d</option>
+								</select>
 								
-                            </div>
-                           
+							</div>
+                            <div class="form-group">
+								<label for="name">isi*</label>
+								<textarea class="form-control"
+								 name="isi" placeholder="isi jawaban..."><?php echo $value['isiPil']; ?></textarea>
+							</div>
                             
                             <div class="form-group">
-								<label for="updated_at">Course*</label>
+								<label for="updated_at">Soal*</label>
 								<select class="form-control "
-								 name="course" value="<?php echo $value['judul']; ?>">
+								 name="soal" value="<?php echo $value['id_soal']; ?>">
 									 <?php
-										 $sql = $db->query("select * from course");
+										 $sql = $db->query("select * from soal");
 										 while($value = $sql->fetch(PDO::FETCH_ASSOC)){
-											 $id = $value['id_course'];
-											 $title = $value['title'];
+											 $id = $value['id_soal'];
+											 $title = $value['soal'];
 											 echo "<option value='$id'>$title</option>";
 											 
 										 }
@@ -73,7 +83,6 @@
 								</select>
 								
 							</div>
-						
                             
                             
                             <input class="btn btn-success" type="submit" name="btn" value="Save" />

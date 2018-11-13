@@ -20,7 +20,7 @@
             <a class="dropdown-item" href="blog/index.php">Blog</a>
             <div class="dropdown-divider"></div>
             <h6 class="dropdown-header">Member:</h6>
-            <a class="dropdown-item" href="user/index.html">User</a>
+            <a class="dropdown-item" href="user/index.php">User</a>
             
           </div>
         </li>

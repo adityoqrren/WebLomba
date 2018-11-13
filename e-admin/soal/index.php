@@ -22,7 +22,7 @@ include("../config.php") ?>
             <li class="breadcrumb-item">
               <a href="../index.php">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Curriculum</li>
+            <li class="breadcrumb-item active">Soal</li>
           </ol>
 
          
@@ -36,35 +36,38 @@ include("../config.php") ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Title</th>
-                      <th>Course</th>
+                      <th>Soal</th>
+                      <th>Jawaban</th>
+                      <th>Materi</th>
                       <th>Tindakan</th>
                       
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Title</th>
-                      <th>Course</th>
+                      <th>Soal</th>
+                      <th>Jawaban</th>
+                      <th>Materi</th>
                       <th>Tindakan</th>
                       
                     </tr>
                   </tfoot>
                   <tbody>
                     <?php
-                        $sql = $db->query("select course.title as judul,course.id_course,curriculum.* from curriculum inner join course on id_course = course_id");
+                        $sql = $db->query("select * from soal inner join materi on id_materi = materi_id");
                        
                         
                         while ( $value = $sql->fetch(PDO::FETCH_ASSOC)) {
                           
                             echo "<tr>";
                 
+                            echo "<td>".$value['soal']."</td>";
+                            echo "<td>".$value['jawaban']."</td>";
                             echo "<td>".$value['title']."</td>";
-                            echo "<td>".$value['judul']."</td>";
                 
                             echo "<td>";
-                            echo "<a href='form-edit.php?id=".$value['id_cur']."'>Edit</a> | ";
-                            echo "<a href='hapus.php?id=".$value['id_cur']."'>Hapus</a>";
+                            echo "<a href='form-edit.php?id=".$value['id_soal']."'>Edit</a> | ";
+                            echo "<a href='hapus.php?id=".$value['id_soal']."'>Hapus</a>";
                             echo "</td>";
                 
                             echo "</tr>";

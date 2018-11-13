@@ -22,7 +22,7 @@ include("../config.php") ?>
             <li class="breadcrumb-item">
               <a href="../index.php">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Curriculum</li>
+            <li class="breadcrumb-item active">Blog</li>
           </ol>
 
          
@@ -36,35 +36,48 @@ include("../config.php") ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Title</th>
-                      <th>Course</th>
+                      <th>Username</th>
+                      <th>Email</th>
+                    
+                      <th>Nama</th>
+                      <th>Tanggal Lahir</th>
+                      <th>Photo</th>
                       <th>Tindakan</th>
                       
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Title</th>
-                      <th>Course</th>
+                      <th>Username</th>
+                      <th>Email</th>
+                      
+                      <th>Nama</th>
+                      <th>Tanggal Lahir</th>
+                      <th>Photo</th>
                       <th>Tindakan</th>
                       
                     </tr>
                   </tfoot>
                   <tbody>
                     <?php
-                        $sql = $db->query("select course.title as judul,course.id_course,curriculum.* from curriculum inner join course on id_course = course_id");
+                        $sql = $db->query("select * from users");
                        
                         
                         while ( $value = $sql->fetch(PDO::FETCH_ASSOC)) {
                           
                             echo "<tr>";
                 
-                            echo "<td>".$value['title']."</td>";
-                            echo "<td>".$value['judul']."</td>";
+                            echo "<td>".$value['username']."</td>";
+                            echo "<td>".$value['email']."</td>";
+                            
+                            echo "<td>".$value['name']."</td>";
+                            echo "<td>".$value['tgllahir']."</td>";
+                            echo "<td>".$value['photo']."</td>";
+                            
                 
                             echo "<td>";
-                            echo "<a href='form-edit.php?id=".$value['id_cur']."'>Edit</a> | ";
-                            echo "<a href='hapus.php?id=".$value['id_cur']."'>Hapus</a>";
+                            
+                            echo "<a href='hapus.php?id=".$value['id']."'>Hapus</a>";
                             echo "</td>";
                 
                             echo "</tr>";

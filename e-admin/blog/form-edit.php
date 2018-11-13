@@ -19,8 +19,8 @@
                     <li class="breadcrumb-item">
                         <a href="../index.php">Dashboard</a>
                     </li>
-                    <li class="breadcrumb-item active">Overview</li>
-                    <li class="breadcrumb-item active">Edit Curriculum</li>
+                    <li class="breadcrumb-item active">Materi</li>
+                    <li class="breadcrumb-item active">Edit Materi</li>
                 </ol>
 
 				<?php if ($_GET['status']=="sukses"){ ?>
@@ -42,7 +42,8 @@
                     
                     <?php
 						$id = $_GET['id'];
-						$sql = $db->query("select course.title as judul,course.id_course,curriculum.* from curriculum inner join course on id_course = course_id where id_cur = $id");
+						$sql = $db->query("select * from blog where id_blog = $id");
+						
                         $value = $sql->fetch(PDO::FETCH_ASSOC);
                     ?>
 
@@ -52,27 +53,62 @@
 						<div class="form-group">
 								<label for="title">Title*</label>
 								<input class="form-control "
-								 type="text" name="title" placeholder="Curriculum Title" value="<?php echo $value['title']; ?>"/>
+								 type="text" name="title" placeholder="Blog Title" value="<?php echo $value['title'] ?>"/>
 								
                             </div>
-                           
-                            
+							<div class="form-group">
+								<label for="name">Description*</label>
+								<textarea class="form-control"
+								 name="description" placeholder="isi materi..."><?php echo $value['description'] ?></textarea>
+								
+							</div>
                             <div class="form-group">
-								<label for="updated_at">Course*</label>
+								<label for="name">Isi*</label>
+								<textarea class="form-control"
+								 name="isi" placeholder="isi materi..."><?php echo $value['isi'] ?></textarea>
+								
+							</div>
+							<div class="form-group">
+								<label for="title">Author*</label>
+								<input class="form-control "
+								 type="text" name="author" placeholder="Materi Title" value="<?php echo $value['author'] ?>"/>
+								
+                            </div>
+                            <div class="form-group">
+								<label for="updated_at">Created Date*</label>
 								<select class="form-control "
-								 name="course" value="<?php echo $value['judul']; ?>">
+								 name="tgl">
 									 <?php
-										 $sql = $db->query("select * from course");
-										 while($value = $sql->fetch(PDO::FETCH_ASSOC)){
-											 $id = $value['id_course'];
-											 $title = $value['title'];
-											 echo "<option value='$id'>$title</option>";
-											 
+									 	for ($i=1; $i <= 31 ; $i++) { 
+											 echo "<option value='$i'>$i</option>";
+										 }
+									 ?>
+								</select>
+								<select class="form-control "
+								 name="bln">
+									 <?php
+									 	for ($i=1; $i <= 12 ; $i++) { 
+											 echo "<option value='$i'>$i</option>";
+										 }
+									 ?>
+								</select>
+								<select class="form-control <"
+								 name="thn">
+									 <?php
+									 	for ($i=2020; $i >= 2000 ; $i--) { 
+											 echo "<option value='$i'>$i</option>";
 										 }
 									 ?>
 								</select>
 								
 							</div>
+                            <div class="form-group">
+								<label for="photo">Photo</label>
+								<input class="form-control-file "
+								 type="file" name="photo" />
+								
+							</div>
+                        
 						
                             
                             
