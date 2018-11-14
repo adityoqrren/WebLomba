@@ -42,12 +42,12 @@
                         <div class="col-12 col-md-4 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
-                                    <a href="#"><img src="<?php echo "../images/".$value['photo']; ?>" alt=""></a>
+                                    <a href="<?php echo $value['title']; ?>.php?id=<?=$value['id_course']?>"><img src="<?php echo "../images/".$value['photo']; ?>" alt=""></a>
                                 </figure><!-- .course-thumbnail -->
                                 
                                 <div class="course-content-wrap">
                                     <header class="entry-header">
-                                        <h2 class="entry-title"><a href="#"><?php echo $value['title']; ?></a></h2>
+                                        <h2 class="entry-title"><a href="<?php echo $value['title']; ?>.php?id=<?=$value['id_course']?>"><?php echo $value['title']; ?></a></h2>
 
                                         <div class="entry-meta flex flex-wrap align-items-center">
                                             <div class="course-author"><a href="#"> <?php echo $value['author']; ?></a></div>
