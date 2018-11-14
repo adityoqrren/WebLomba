@@ -4,7 +4,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include("partials/head.php") ?>
+<?php include("partials/head.php"); include("../config.php") ?>
 <body>
 <?php include("partials/nav.php") ?>
 
@@ -272,113 +272,46 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                     </header><!-- .heading
                 </div><!-- .col -->
 
-                <div class="col-12 col-md-6 col-lg-4 px-25">
-                    <div class="course-content">
-                        <figure class="course-thumbnail">
-                            <a href="#"><img src="images/1.jpg" alt=""></a>
-                        </figure><!-- .course-thumbnail -->
+                <?php
+                                    $sql = $db->query("select * from course");
+                                    while ($value = $sql->fetch(PDO::FETCH_ASSOC)) {
+                                ?>
+                        <div class="col-12 col-md-4 px-25">
+                            <div class="course-content">
+                                <figure class="course-thumbnail">
+                                    <a href="<?= $value['title'] ?>.php?id=<?=$value['id_course'] ?>"><img src="<?php echo "../images/".$value['photo']; ?>" alt=""></a>
+                                </figure><!-- .course-thumbnail -->
+                                
+                                <div class="course-content-wrap">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title"><a href="<?= $value['title'] ?>.php?id=<?=$value['id_course'] ?>"><?php echo $value['title']; ?></a></h2>
 
-                        <div class="course-content-wrap">
-                            <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">The Complete Android Developer Course</a></h2>
+                                        <div class="entry-meta flex flex-wrap align-items-center">
+                                            <div class="course-author"><a href="#"> <?php echo $value['author']; ?></a></div>
 
-                                <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">Ms. Lara Croft </a></div>
+                                            <div class="course-date"><?php echo $value['create_date']; ?></div>
+                                        </div><!-- .course-date -->
+                                    </header><!-- .entry-header -->
 
-                                    <div class="course-date">July 21, 2018</div>
-                                </div><!-- .course-date -->
-                            </header><!-- .entry-header -->
+                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
+                                        <div class="course-cost">
+                                            <!-- $45 <span class="price-drop">$68</span> -->
+                                        </div><!-- .course-cost -->
 
-                            <footer class="entry-footer flex justify-content-between align-items-center">
-                                <div class="course-cost">
-                                    $45 <span class="price-drop">$68</span>
-                                </div><!-- .course-cost -->
+                                        <!-- <div class="course-ratings flex justify-content-end align-items-center">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star-o"></span>
 
-                                <div class="course-ratings flex justify-content-end align-items-center">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star-o"></span>
-
-                                    <span class="course-ratings-count">(4 votes)</span>
-                                </div><!-- .course-ratings -->
-                            </footer><!-- .entry-footer -->
-                        </div><!-- .course-content-wrap -->
-                    </div><!-- .course-content -->
-                </div><!-- .col -->
-
-                <div class="col-12 col-md-6 col-lg-4 px-25">
-                    <div class="course-content">
-                        <figure class="course-thumbnail">
-                            <a href="#"><img src="images/2.jpg" alt=""></a>
-                        </figure><!-- .course-thumbnail -->
-
-                        <div class="course-content-wrap">
-                            <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">The Ultimate Drawing Course Beginner to Advanced</a></h2>
-
-                                <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">Michelle Golden</a></div>
-
-                                    <div class="course-date">Mar 14, 2018</div>
-                                </div><!-- .course-date -->
-                            </header><!-- .entry-header -->
-
-                            <footer class="entry-footer flex justify-content-between align-items-center">
-                                <div class="course-cost">
-                                    <span class="free-cost">Free</span>
-                                </div><!-- .price-drop -->
-
-                                <div class="course-ratings flex justify-content-end align-items-center">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star-o"></span>
-
-                                    <span class="course-ratings-count">(4 votes)</span>
-                                </div><!-- .course-ratings -->
-                            </footer><!-- .entry-footer -->
-                        </div><!-- .course-content-wrap -->
-                    </div><!-- .course-content -->
-                </div><!-- .col -->
-
-                <div class="col-12 col-md-6 col-lg-4 px-25">
-                    <div class="course-content">
-                        <figure class="course-thumbnail">
-                            <a href="#"><img src="images/3.jpg" alt=""></a>
-                        </figure><!-- .course-thumbnail -->
-
-                        <div class="course-content-wrap">
-                            <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">The Complete Digital Marketing Course</a></h2>
-
-                                <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">Ms. Lucius</a></div>
-
-                                    <div class="course-date">Dec 18, 2018</div>
-                                </div><!-- .course-date -->
-                            </header><!-- .entry-header -->
-
-                            <footer class="entry-footer flex justify-content-between align-items-center">
-                                <div class="course-cost">
-                                    $55 <span class="price-drop">$78</span>
-                                </div><!-- .course-cost -->
-
-                                <div class="course-ratings flex justify-content-end align-items-center">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star-o"></span>
-
-                                    <span class="course-ratings-count">(4 votes)</span>
-                                </div><!-- .course-ratings -->
-                            </footer><!-- .entry-footer -->
-                        </div><!-- .course-content-wrap -->
-                    </div><!-- .course-content -->
-                </div><!-- .col -->
+                                            <span class="course-ratings-count">(4 votes)</span> -->
+                                        <!-- </div>.course-ratings -->
+                                    </footer><!-- .entry-footer -->
+                                </div><!-- .course-content-wrap -->
+                            </div><!-- .course-content -->
+                        </div><!-- .col -->
+                                    <?php } ?>
 
                 <div class="col-12 px-25 flex justify-content-center">
                     <a class="btn" href="courses.php">view all courses</a>
@@ -404,7 +337,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                             <div class="posted-date position-absolute">
                                 <div class="day">23</div>
                                 <div class="month">mar</div>
-                            </div><!-- .posted-date -->
+                            </div><!-- .posted-date
                         </figure><!-- .event-thumbnail
 
                         <header class="entry-header flex flex-wrap align-items-center">
@@ -413,7 +346,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                             <div class="event-location"><i class="fa fa-map-marker"></i>40 Baria Sreet 133/2 NewYork City, US</div>
 
                             <div class="event-duration"><i class="fa fa-calendar"></i>10 Dec - 12 dec</div>
-                        </header><!-- .entry-header -->
+                        </header><!-- .entry-header 
                     </div><!-- .featured-event-content -
                 </div><!-- .col
 
@@ -461,7 +394,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                                     <div class="post-author"><a href="#">Ms. Lara Croft </a></div>
 
                                     <div class="post-comments">02 Comments  </div>
-                                </div><!-- .entry-meta -->
+                                </div><!-- .entry-meta
                             </header><!-- .entry-header
 
                             <div class="entry-content">
@@ -534,122 +467,8 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
         </div><!-- .gallery-wrap
     </section><!-- .home-gallery -->
 
-    <!--<div class="clients-logo">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 flex flex-wrap justify-content-center justify-content-lg-between align-items-center">
-                    <div class="logo-wrap">
-                        <img src="images/logo-1.png" alt="">
-                    </div><!-- .logo-wrap
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-2.png" alt="">
-                    </div><!-- .logo-wrap
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-3.png" alt="">
-                    </div><!-- .logo-wrap
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-4.png" alt="">
-                    </div><!-- .logo-wrap
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-5.png" alt="">
-                    </div><!-- .logo-wrap
-                </div><!-- .col
-            </div><!-- .row
-        </div><!-- .container
-    </div><!-- .clients-logo -->
-
-    <footer class="site-footer">
-        <div class="footer-widgets">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="foot-about">
-                            <a class="foot-logo" href="#"><img src="images/foot-logo.png" alt=""></a>
-
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. </p>
-
-                            <p class="footer-copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                        </div><!-- .foot-about -->
-                    </div><!-- .col -->
-
-                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
-                        <div class="foot-contact">
-                            <h2>Contact Us</h2>
-
-                            <ul>
-                                <li>Email: info.deertcreative@gmail.com</li>
-                                <li>Phone: (+88) 111 555 666</li>
-                                <li>Address: 40 Baria Sreet 133/2 NewYork City, US</li>
-                            </ul>
-                        </div><!-- .foot-contact -->
-                    </div><!-- .col -->
-
-                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
-                        <div class="quick-links flex flex-wrap">
-                            <h2 class="w-100">Quick Links</h2>
-
-                            <ul class="w-50">
-                                <li><a href="#">About </a></li>
-                                <li><a href="#">Terms of Use </a></li>
-                                <li><a href="#">Privacy Policy </a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
-
-                            <ul class="w-50">
-                                <li><a href="#">Documentation</a></li>
-                                <li><a href="#">Forums</a></li>
-                                <li><a href="#">Language Packs</a></li>
-                                <li><a href="#">Release Status</a></li>
-                            </ul>
-                        </div><!-- .quick-links -->
-                    </div><!-- .col -->
-
-                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
-                        <div class="follow-us">
-                            <h2>Follow Us</h2>
-
-                            <ul class="follow-us flex flex-wrap align-items-center">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            </ul>
-                        </div><!-- .quick-links -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .footer-widgets -->
-
-        <div class="footer-bar">
-            <div class="container">
-                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <div class="download-apps flex flex-wrap justify-content-center justify-content-lg-start align-items-center">
-                            <a href="#"><img src="images/app-store.png" alt=""></a>
-                            <a href="#"><img src="images/play-store.png" alt=""></a>
-                        </div><!-- .download-apps -->
-
-                    </div>
-
-                    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
-                        <div class="footer-bar-nav">
-                            <ul class="flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-                                <li><a href="#">DPA</a></li>
-                                <li><a href="#">Terms of Use</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                            </ul>
-                        </div><!-- .footer-bar-nav -->
-                    </div><!-- .col-12 -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .footer-bar -->
-    </footer><!-- .site-footer -->
+    <?php include("partials/logo.php") ?>
+      <?php include("partials/footer.php") ?>
 
 <script type='text/javascript' src='js/jquery.js'></script>
 <script type='text/javascript' src='js/swiper.min.js'></script>

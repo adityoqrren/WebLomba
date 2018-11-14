@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("partials/head.php"); ?>
+<?php include("partials/head.php"); 
+    include("../config.php")
+?>
 <body class="courses-page">
     <div class="page-header">
       <?php include("partials/navcourses.php") ?>
@@ -17,7 +19,7 @@
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
 
-    <div class="container">
+    <div class="container courses">
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumbs">
@@ -33,29 +35,33 @@
             <div class="col-12 col-lg-12">
                 <div class="featured-courses courses-wrap">
                     <div class="row mx-m-25">
+                    <?php
+                                    $sql = $db->query("select * from course");
+                                    while ($value = $sql->fetch(PDO::FETCH_ASSOC)) {
+                                ?>
                         <div class="col-12 col-md-4 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
-                                    <a href="#"><img src="images/1.jpg" alt=""></a>
+                                    <a href="<?php echo $value['title']; ?>.php?id=<?=$value['id_course']?>"><img src="<?php echo "../images/".$value['photo']; ?>" alt=""></a>
                                 </figure><!-- .course-thumbnail -->
-
+                                
                                 <div class="course-content-wrap">
                                     <header class="entry-header">
-                                        <h2 class="entry-title"><a href="single-courses.php">The Complete Android Developer Course</a></h2>
+                                        <h2 class="entry-title"><a href="<?php echo $value['title']; ?>.php?id=<?=$value['id_course']?>"><?php echo $value['title']; ?></a></h2>
 
                                         <div class="entry-meta flex flex-wrap align-items-center">
-                                            <div class="course-author"><a href="#">Ms. Lara Croft </a></div>
+                                            <div class="course-author"><a href="#"> <?php echo $value['author']; ?></a></div>
 
-                                            <div class="course-date">July 21, 2018</div>
+                                            <div class="course-date"><?php echo $value['create_date']; ?></div>
                                         </div><!-- .course-date -->
                                     </header><!-- .entry-header -->
 
-                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
+                                  <!--  <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
                                         <div class="course-cost">
                                             $45 <span class="price-drop">$68</span>
                                         </div><!-- .course-cost -->
 
-                                        <div class="course-ratings flex justify-content-end align-items-center">
+                                        <!-- <div class="course-ratings flex justify-content-end align-items-center">
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
@@ -63,191 +69,13 @@
                                             <span class="fa fa-star-o"></span>
 
                                             <span class="course-ratings-count">(4 votes)</span>
-                                        </div><!-- .course-ratings -->
+                                        </div>.course-ratings -->
                                     </footer><!-- .entry-footer -->
                                 </div><!-- .course-content-wrap -->
                             </div><!-- .course-content -->
                         </div><!-- .col -->
-
-                        <div class="col-12 col-md-4 px-25">
-                            <div class="course-content">
-                                <figure class="course-thumbnail">
-                                    <a href="#"><img src="images/2.jpg" alt=""></a>
-                                </figure><!-- .course-thumbnail -->
-
-                                <div class="course-content-wrap">
-                                    <header class="entry-header">
-                                        <h2 class="entry-title"><a href="#">The Ultimate Drawing Course Beginner to Advanced</a></h2>
-
-                                        <div class="entry-meta flex flex-wrap align-items-center">
-                                            <div class="course-author"><a href="#">Michelle Golden</a></div>
-
-                                            <div class="course-date">Mar 14, 2018</div>
-                                        </div><!-- .course-date -->
-                                    </header><!-- .entry-header -->
-
-                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
-                                        <div class="course-cost">
-                                            <span class="free-cost">Free</span>
-                                        </div><!-- .price-drop -->
-
-                                        <div class="course-ratings flex justify-content-end align-items-center">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star-o"></span>
-
-                                            <span class="course-ratings-count">(4 votes)</span>
-                                        </div><!-- .course-ratings -->
-                                    </footer><!-- .entry-footer -->
-                                </div><!-- .course-content-wrap -->
-                            </div><!-- .course-content -->
-                        </div><!-- .col -->
-
-                        <div class="col-12 col-md-4 px-25">
-                            <div class="course-content">
-                                <figure class="course-thumbnail">
-                                    <a href="#"><img src="images/3.jpg" alt=""></a>
-                                </figure><!-- .course-thumbnail -->
-
-                                <div class="course-content-wrap">
-                                    <header class="entry-header">
-                                        <h2 class="entry-title"><a href="#">The Complete Digital Marketing Course</a></h2>
-
-                                        <div class="entry-meta flex flex-wrap align-items-center">
-                                            <div class="course-author"><a href="#">Ms. Lucius</a></div>
-
-                                            <div class="course-date">Dec 18, 2018</div>
-                                        </div><!-- .course-date -->
-                                    </header><!-- .entry-header -->
-
-                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
-                                        <div class="course-cost">
-                                            $55 <span class="price-drop">$78</span>
-                                        </div><!-- .course-cost -->
-
-                                        <div class="course-ratings flex justify-content-end align-items-center">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star-o"></span>
-
-                                            <span class="course-ratings-count">(4 votes)</span>
-                                        </div><!-- .course-ratings -->
-                                    </footer><!-- .entry-footer -->
-                                </div><!-- .course-content-wrap -->
-                            </div><!-- .course-content -->
-                        </div><!-- .col -->
-
-                        <div class="col-12 col-md-4 px-25">
-                            <div class="course-content">
-                                <figure class="course-thumbnail">
-                                    <a href="#"><img src="images/4.jpg" alt=""></a>
-                                </figure><!-- .course-thumbnail -->
-
-                                <div class="course-content-wrap">
-                                    <header class="entry-header">
-                                        <h2 class="entry-title"><a href="#">The Unreal Engine Developer Course</a></h2>
-
-                                        <div class="entry-meta flex flex-wrap align-items-center">
-                                            <div class="course-author"><a href="#">Mr. John Wick</a></div>
-
-                                            <div class="course-date">Otc 17, 2018</div>
-                                        </div><!-- .course-date -->
-                                    </header><!-- .entry-header -->
-
-                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
-                                        <div class="course-cost">
-                                            <span class="free-cost">Free</span>
-                                        </div><!-- .course-cost -->
-
-                                        <div class="course-ratings flex justify-content-end align-items-center">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star-o"></span>
-
-                                            <span class="course-ratings-count">(4 votes)</span>
-                                        </div><!-- .course-ratings -->
-                                    </footer><!-- .entry-footer -->
-                                </div><!-- .course-content-wrap -->
-                            </div><!-- .course-content -->
-                        </div><!-- .col -->
-
-                        <div class="col-12 col-md-4 px-25">
-                            <div class="course-content">
-                                <figure class="course-thumbnail">
-                                    <a href="#"><img src="images/5.jpg" alt=""></a>
-                                </figure><!-- .course-thumbnail -->
-
-                                <div class="course-content-wrap">
-                                    <header class="entry-header">
-                                        <h2 class="entry-title"><a href="#">Progressive Web Apps (PWA) - The Complete Guide</a></h2>
-
-                                        <div class="entry-meta flex flex-wrap align-items-center">
-                                            <div class="course-author"><a href="#">Mr. Tom Redder</a></div>
-
-                                            <div class="course-date">Sep 14, 2018</div>
-                                        </div><!-- .course-date -->
-                                    </header><!-- .entry-header -->
-
-                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
-                                        <div class="course-cost">
-                                            $38 <span class="price-drop">$48</span>
-                                        </div><!-- .course-cost -->
-
-                                        <div class="course-ratings flex justify-content-end align-items-center">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star-o"></span>
-
-                                            <span class="course-ratings-count">(4 votes)</span>
-                                        </div><!-- .course-ratings -->
-                                    </footer><!-- .entry-footer -->
-                                </div><!-- .course-content-wrap -->
-                            </div><!-- .course-content -->
-                        </div><!-- .col -->
-
-                        <div class="col-12 col-md-4 px-25">
-                            <div class="course-content">
-                                <figure class="course-thumbnail">
-                                    <a href="#"><img src="images/6.jpg" alt=""></a>
-                                </figure><!-- .course-thumbnail -->
-
-                                <div class="course-content-wrap">
-                                    <header class="entry-header">
-                                        <h2 class="entry-title"><a href="#">Cryptocurrency Investment Course 2018</a></h2>
-
-                                        <div class="entry-meta flex flex-wrap align-items-center">
-                                            <div class="course-author"><a href="#">Russell Stephens</a></div>
-
-                                            <div class="course-date">Nov 06, 2018</div>
-                                        </div><!-- .course-date -->
-                                    </header><!-- .entry-header -->
-
-                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
-                                        <div class="course-cost">
-                                            <span class="free-cost">Free</span>
-                                        </div><!-- .course-cost -->
-
-                                        <div class="course-ratings flex justify-content-end align-items-center">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star-o"></span>
-
-                                            <span class="course-ratings-count">(4 votes)</span>
-                                        </div><!-- .course-ratings -->
-                                    </footer><!-- .entry-footer -->
-                                </div><!-- .course-content-wrap -->
-                            </div><!-- .course-content -->
-                        </div><!-- .col -->
+                                    <?php } ?>
+                        
                     </div><!-- .row -->
                 </div><!-- .featured-courses -->
 
@@ -255,62 +83,35 @@
                     <div class="col-12 col-lg-4 order-2 order-lg-1 mt-3 mt-lg-0">
                         <ul class="flex flex-wrap align-items-center order-2 order-lg-1 p-0 m-0">
                             <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
+                            <!-- <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li> -->
                             <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                         </ul>
                     </div>
 
                     <div class="col-12 flex justify-content-start justify-content-lg-end col-lg-8 order-1 order-lg-2">
                         <div class="pagination-results flex flex-wrap align-items-center">
-                            <p class="m-0">Showing 1–3 of 12 results</p>
+                            <!-- <p class="m-0">Showing 1–3 of 12 results</p> -->
 
-                            <form>
+                            <!-- <form>
                                 <select>
                                     <option>Show: 06</option>
                                     <option>Show: 12</option>
                                     <option>Show: 18</option>
                                     <option>Show: 24</option>
                                 </select>
-                            </form>
+                            </form> -->
                         </div><!-- .pagination-results -->
                     </div>
                 </div><!-- .pagination -->
             </div><!-- .col -->
 
-
-            </div><!-- .col -->
         </div><!-- .row -->
     </div><!-- .container -->
 
-    <!--<div class="clients-logo">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 flex flex-wrap justify-content-center justify-content-lg-between align-items-center">
-                    <div class="logo-wrap">
-                        <img src="images/logo-1.png" alt="">
-                    </div><!-- .logo-wrap
+  <?php include("partials/logo.php") ?>
 
-                    <div class="logo-wrap">
-                        <img src="images/logo-2.png" alt="">
-                    </div><!-- .logo-wrap
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-3.png" alt="">
-                    </div><!-- .logo-wrap
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-4.png" alt="">
-                    </div><!-- .logo-wrap
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-5.png" alt="">
-                    </div><!-- .logo-wrap
-                </div><!-- .col
-            </div><!-- .row
-        </div><!-- .container 
-    </div><!-- .clients-logo -->
-
+  <?php  include("partials/logo.php")?>
   <?php include("partials/footer.php") ?>
 
     <script type='text/javascript' src='js/jquery.js'></script>
