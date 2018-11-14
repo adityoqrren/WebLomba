@@ -18,10 +18,24 @@
                             </div><!-- .header-bar-search -->
 
                             <div class="header-bar-menu">
+                                <?php
+                                session_start();
+                                if(!isset($_SESSION["user"])){
+                                ?>
                                 <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-                                    <li><a href="../login-register/register.php">Register</a></li>
+                                <li><a href="../login-register/register.php">Register</a></li>
                                     <li><a href="../login-register/login.php">Login</a></li>
                                 </ul>
+                                <?php 
+                                    }else{
+                                    ?>
+                                        <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                        <li><a href="about.html"><?php echo $_SESSION["user"]["name"];  ?></a></li>
+                                        </ul>
+
+                                    <?php
+                                    }
+                                ?>
                             </div><!-- .header-bar-menu -->
                         </div><!-- .col -->
                     </div><!-- .row -->

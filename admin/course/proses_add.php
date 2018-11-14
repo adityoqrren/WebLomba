@@ -13,12 +13,17 @@
         $tempPho = $_FILES['photo']['tmp_name'];
         $imageSize = $_FILES['photo']['size'];
         $dir = "../../images/";
+        
 
         $imgExt = strtolower(pathinfo($photo,PATHINFO_EXTENSION));
         $valid_extensions = array('jpeg','jpg','png','gif');
         $pic = rand(1000,1000000).".".$imgExt;
         $terupload = move_uploaded_file($tempPho,$dir.$pic);
-
+        if($terupload){
+            echo "upload";
+        }else{
+            echo "not";
+        }
         
         
             $sql = "insert into course(title,author,create_date,description,photo) values(:title,:author,:date,:desc,:photo)";
