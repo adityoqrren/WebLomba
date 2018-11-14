@@ -57,6 +57,14 @@ a:hover, a:active {
     width: 100%;
 }
 
+.site-header-lectures{
+  position: static;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
     .site-header {
         background: rgba(255,255,255,.1);
@@ -1448,6 +1456,9 @@ a.btn:hover {
 /*--------------------------------------------------------------
 # Single Courses Page
 --------------------------------------------------------------*/
+.single-courses-cont{
+  margin-bottom: 20px;
+}
 .single-courses-page .page-header {
     background: url("images/single-courses-bg.jpg") no-repeat center;
 }
@@ -2719,4 +2730,29 @@ p.footer-copyright {
 
 .footer-bar-nav ul li a:hover {
     color: #34d986;
+}
+
+
+.courses{
+  margin-bottom: 20px;
+}
+
+.foot-logo img{
+  width: 80%;
+}
+
+.myquestion{
+  height: 200px;
+  border: 1px solid black;
+  margin: 8px;
+}
+
+.number{
+  padding: 4px;
+  height: 30px;
+  width: 60px;
+  margin: 5px;
+  background-color: aqua;
+  border-radius: 25%;
+  text-align: center;
 }

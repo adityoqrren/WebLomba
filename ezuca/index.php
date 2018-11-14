@@ -394,7 +394,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                                     <div class="post-author"><a href="#">Ms. Lara Croft </a></div>
 
                                     <div class="post-comments">02 Comments  </div>
-                                </div><!-- .entry-meta -->
+                                </div><!-- .entry-meta
                             </header><!-- .entry-header
 
                             <div class="entry-content">

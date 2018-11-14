@@ -19,7 +19,7 @@
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
 
-    <div class="container">
+    <div class="container courses">
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumbs">
@@ -56,7 +56,7 @@
                                         </div><!-- .course-date -->
                                     </header><!-- .entry-header -->
 
-                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
+                                  <!--  <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
                                         <div class="course-cost">
                                             $45 <span class="price-drop">$68</span>
                                         </div><!-- .course-cost -->
@@ -106,13 +106,12 @@
                 </div><!-- .pagination -->
             </div><!-- .col -->
 
-
-            </div><!-- .col -->
         </div><!-- .row -->
     </div><!-- .container -->
 
   <?php include("partials/logo.php") ?>
 
+  <?php  include("partials/logo.php")?>
   <?php include("partials/footer.php") ?>
 
     <script type='text/javascript' src='js/jquery.js'></script>
