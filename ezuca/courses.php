@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("partials/head.php"); 
+<?php include("partials/head.php");
     include("../config.php")
 ?>
 <body class="courses-page">
@@ -44,7 +44,7 @@
                                 <figure class="course-thumbnail">
                                     <a href="<?php echo $value['title']; ?>.php?id=<?=$value['id_course']?>"><img src="<?php echo "../images/".$value['photo']; ?>" alt=""></a>
                                 </figure><!-- .course-thumbnail -->
-                                
+
                                 <div class="course-content-wrap">
                                     <header class="entry-header">
                                         <h2 class="entry-title"><a href="<?php echo $value['title']; ?>.php?id=<?=$value['id_course']?>"><?php echo $value['title']; ?></a></h2>
@@ -75,7 +75,7 @@
                             </div><!-- .course-content -->
                         </div><!-- .col -->
                                     <?php } ?>
-                        
+
                     </div><!-- .row -->
                 </div><!-- .featured-courses -->
 
@@ -110,8 +110,6 @@
     </div><!-- .container -->
 
   <?php include("partials/logo.php") ?>
-
-  <?php  include("partials/logo.php")?>
   <?php include("partials/footer.php") ?>
 
     <script type='text/javascript' src='js/jquery.js'></script>
