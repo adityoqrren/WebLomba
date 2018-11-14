@@ -66,9 +66,9 @@
 								 name="curriculum" value="<?php echo $value['judul']; ?>">
 									 <?php
 										 $sql = $db->query("select * from curriculum");
-										 while($value = $sql->fetch(PDO::FETCH_ASSOC)){
-											 $id = $value['id_cur'];
-											 $title = $value['title'];
+										 while($value2 = $sql->fetch(PDO::FETCH_ASSOC)){
+											 $id = $value2['id_cur'];
+											 $title = $value2['title'];
 											 echo "<option value='$id'>$title</option>";
 											 
 										 }
@@ -79,7 +79,7 @@
                             <div class="form-group">
 								<label for="name">Isi*</label>
 								<textarea class="form-control"
-								 name="isi" placeholder="isi materi..."></textarea>
+								 name="isi" placeholder="isi materi..."><?php echo $value['isi']; ?></textarea>
 								
 							</div>
                             <div class="form-group">
@@ -116,6 +116,7 @@
 								 type="file" name="photo" />
 								
 							</div>
+							<input name="pic" type="hidden" id="x" value="<?php echo $value['photo']; ?>" />
                         
 						
                             

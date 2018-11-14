@@ -61,7 +61,7 @@
                                             $45 <span class="price-drop">$68</span>
                                         </div><!-- .course-cost -->
 
-                                        <div class="course-ratings flex justify-content-end align-items-center">
+                                        <!-- <div class="course-ratings flex justify-content-end align-items-center">
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
@@ -69,7 +69,7 @@
                                             <span class="fa fa-star-o"></span>
 
                                             <span class="course-ratings-count">(4 votes)</span>
-                                        </div><!-- .course-ratings -->
+                                        </div>.course-ratings -->
                                     </footer><!-- .entry-footer -->
                                 </div><!-- .course-content-wrap -->
                             </div><!-- .course-content -->
@@ -83,24 +83,24 @@
                     <div class="col-12 col-lg-4 order-2 order-lg-1 mt-3 mt-lg-0">
                         <ul class="flex flex-wrap align-items-center order-2 order-lg-1 p-0 m-0">
                             <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
+                            <!-- <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li> -->
                             <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                         </ul>
                     </div>
 
                     <div class="col-12 flex justify-content-start justify-content-lg-end col-lg-8 order-1 order-lg-2">
                         <div class="pagination-results flex flex-wrap align-items-center">
-                            <p class="m-0">Showing 1–3 of 12 results</p>
+                            <!-- <p class="m-0">Showing 1–3 of 12 results</p> -->
 
-                            <form>
+                            <!-- <form>
                                 <select>
                                     <option>Show: 06</option>
                                     <option>Show: 12</option>
                                     <option>Show: 18</option>
                                     <option>Show: 24</option>
                                 </select>
-                            </form>
+                            </form> -->
                         </div><!-- .pagination-results -->
                     </div>
                 </div><!-- .pagination -->

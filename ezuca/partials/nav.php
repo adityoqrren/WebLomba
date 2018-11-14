@@ -5,7 +5,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
                             <div class="header-bar-email d-flex align-items-center">
-                                <i class="fa fa-envelope"></i><a href="#">learningthis@gmail.com</a>
+                                <i class="fa fa-envelope"></i><a href="#">developercircle12@gmail.com</a>
                             </div><!-- .header-bar-email -->
                         </div><!-- .col -->
 
@@ -30,7 +30,7 @@
                                     }else{
                                     ?>
                                         <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-                                        <li><a href="about.html"><?php echo $_SESSION["user"]["name"];  ?></a></li>
+                                        <li><a href="about.php"><?php echo $_SESSION["user"]["name"];  ?></a></li>
                                         </ul>
 
                                     <?php
@@ -46,7 +46,7 @@
                     <div class="row">
                         <div class="col-9 col-lg-3">
                             <div class="site-branding">
-                                <h1 class="site-title"><a href="index.html" rel="home">Learning<span>This</span></a></h1>
+                                <h1 class="site-title"><a href="index.php" rel="home">Learning<span>This</span></a></h1>
                             </div><!-- .site-branding -->
                         </div><!-- .col -->
 
@@ -54,7 +54,7 @@
                             <nav class="site-navigation flex justify-content-end align-items-center">
                                 <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                     <li class="current-menu-item"><a href="index.php">Home</a></li>
-                                    <li><a href="#">About</a></li>
+                                    <li><a href="about.php">About</a></li>
                                     <li><a href="courses.php">Courses</a></li>
                                   <!--  <li><a href="#">blog</a></li>
                                     <li><a href="#">Contact</a></li> -->

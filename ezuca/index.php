@@ -277,12 +277,12 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                         <div class="col-12 col-md-4 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
-                                    <a href="#"><img src="<?php echo "../images/".$value['photo']; ?>" alt=""></a>
+                                    <a href="<?= $value['title'] ?>.php?id=<?=$value['id_course'] ?>"><img src="<?php echo "../images/".$value['photo']; ?>" alt=""></a>
                                 </figure><!-- .course-thumbnail -->
 
                                 <div class="course-content-wrap">
                                     <header class="entry-header">
-                                        <h2 class="entry-title"><a href="#"><?php echo $value['title']; ?></a></h2>
+                                        <h2 class="entry-title"><a href="<?= $value['title'] ?>.php?id=<?=$value['id_course'] ?>"><?php echo $value['title']; ?></a></h2>
 
                                         <div class="entry-meta flex flex-wrap align-items-center">
                                             <div class="course-author"><a href="#"> <?php echo $value['author']; ?></a></div>
@@ -293,18 +293,18 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
 
                                     <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
                                         <div class="course-cost">
-                                            $45 <span class="price-drop">$68</span>
+                                            <!-- $45 <span class="price-drop">$68</span> -->
                                         </div><!-- .course-cost -->
 
-                                        <div class="course-ratings flex justify-content-end align-items-center">
+                                        <!-- <div class="course-ratings flex justify-content-end align-items-center">
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star-o"></span>
 
-                                            <span class="course-ratings-count">(4 votes)</span>
-                                        </div><!-- .course-ratings -->
+                                            <span class="course-ratings-count">(4 votes)</span> -->
+                                        <!-- </div>.course-ratings -->
                                     </footer><!-- .entry-footer -->
                                 </div><!-- .course-content-wrap -->
                             </div><!-- .course-content -->

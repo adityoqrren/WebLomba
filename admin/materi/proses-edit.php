@@ -9,13 +9,32 @@
         $bln = $_POST['bln'];
         $thn = $_POST['thn'];
         $date = $thn."-".$bln."-".$tgl;
-        $photo = $_POST['photo'];
+        if(!empty($_FILES['photo']['name'])){
+            $photo = $_FILES['photo']['name'];
+            $tempPho = $_FILES['photo']['tmp_name'];
+            $imageSize = $_FILES['photo']['size'];
+            $dir = "../../images/";
+            
+
+            $imgExt = strtolower(pathinfo($photo,PATHINFO_EXTENSION));
+            $valid_extensions = array('jpeg','jpg','png','gif');
+            $pic = rand(1000,1000000).".".$imgExt;
+            $terupload = move_uploaded_file($tempPho,$dir.$pic);
+            if($terupload){
+                echo "upload";
+            }else{
+                echo "not";
+            }
+        }else{
+            echo $_POST['pic'];
+            $pic = $_POST['pic'];
+        }
         
         $sql = "update materi set title = :title,curriculum_id = :curriculum,isi = :isi, time = :date, photo = :photo where id_materi= :id";
             $stmt = $db->prepare($sql);
 
             //bind paramater ke query
-            $params = [":title"=>$title,":curriculum"=>$curriculum,":id"=>$id,":isi"=>$isi,":date"=>$date,":photo"=>$photo];
+            $params = [":title"=>$title,":curriculum"=>$curriculum,":id"=>$id,":isi"=>$isi,":date"=>$date,":photo"=>$pic];
             var_dump($params);
             //eksekusi query untuk menyimpan ke database
             $saved = $stmt->execute($params);

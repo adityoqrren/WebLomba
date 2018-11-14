@@ -99,10 +99,10 @@
                             <div class="form-group">
 								<label for="photo">Photo</label>
 								<input class="form-control-file "
-								 type="file" name="photo" value="<?php echo $value['photo']; ?>"/>
+								 type="file" name="photo" />
 								
 							</div>
-                            
+                            <input name="pic" type="hidden" id="x" value="<?php echo $value['photo']; ?>" />
                             <input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>
 
