@@ -14,16 +14,16 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                     <div class="col-12">
                         <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
                             <header class="entry-header">
-                                <h4>Get started with online courses</h4>
-                                <h1>best online<br/>Learning system</h1>
+                                <h4>Website Belajar Online</h4>
+                                <h1>IMPROVE YOUR SKILLS<br/>From Zero To Pro</h1>
                             </header><!-- .entry-header -->
 
                             <div class="entry-content">
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                                <p>Bergabunglah Bersama Kami untuk belajar kapapun dan dimanapun secara gratis</p>
                             </div><!-- .entry-content -->
 
                             <footer class="entry-footer read-more">
-                                <a href="#">read more</a>
+                                <a href="#">JOIN</a>
                             </footer><!-- .entry-footer -->
                         </div><!-- .hero-content-wrap -->
                     </div><!-- .col -->
@@ -32,7 +32,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
         </div><!-- .hero-content-hero-content-overlay -->
     </div><!-- .hero-content -->
 
-    <div class="icon-boxes">
+    <!-- <div class="icon-boxes">
         <div class="container-fluid">
             <div class="flex flex-wrap align-items-stretch">
                 <div class="icon-box">
@@ -40,74 +40,74 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                         <span class="ti-user"></span>
                     </div><!-- .icon -->
 
-                    <header class="entry-header">
+                    <!-- <header class="entry-header">
                         <h2 class="entry-title">Learn From The Experts</h2>
                     </header><!-- .entry-header -->
 
-                    <div class="entry-content">
+                    <!-- <div class="entry-content">
                         <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
                     </div><!-- .entry-content -->
 
-                    <footer class="entry-footer read-more">
+                    <!-- <footer class="entry-footer read-more">
                         <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
-                    </footer><!-- .entry-footer -->
-                </div><!-- .icon-box -->
+                    </footer><!-- .entry-footer
+                </div><!-- .icon-box
 
                 <div class="icon-box">
                     <div class="icon">
                         <span class="ti-folder"></span>
-                    </div><!-- .icon -->
+                    </div><!-- .icon
 
                     <header class="entry-header">
                         <h2 class="entry-title">Book Library & Store</h2>
-                    </header><!-- .entry-header -->
+                    </header><!-- .entry-header
 
                     <div class="entry-content">
                         <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                    </div><!-- .entry-content -->
+                    </div><!-- .entry-content
 
                     <footer class="entry-footer read-more">
                         <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
-                    </footer><!-- .entry-footer -->
-                </div><!-- .icon-box -->
+                    </footer><!-- .entry-footer
+                </div><!-- .icon-box
 
                 <div class="icon-box">
                     <div class="icon">
                         <span class="ti-book"></span>
-                    </div><!-- .icon -->
+                    </div><!-- .icon
 
                     <header class="entry-header">
                         <h2 class="entry-title">Best Course Online</h2>
-                    </header><!-- .entry-header -->
+                    </header><!-- .entry-header
 
                     <div class="entry-content">
                         <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                    </div><!-- .entry-content -->
+                    </div><!-- .entry-content
 
                     <footer class="entry-footer read-more">
                         <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
                     </footer><!-- .entry-footer -->
-                </div><!-- .icon-box -->
+                </div><!-- .icon-box
 
                 <div class="icon-box">
                     <div class="icon">
                         <span class="ti-world"></span>
-                    </div><!-- .icon -->
+                    </div><!-- .icon
 
                     <header class="entry-header">
                         <h2 class="entry-title">Best Industry Leaders</h2>
-                    </header><!-- .entry-header -->
+                    </header><!-- .entry-header
 
                     <div class="entry-content">
                         <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                    </div><!-- .entry-content -->
+                    </div><!-- .entry-content
 
                     <footer class="entry-footer read-more">
                         <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
-                    </footer><!-- .entry-footer -->
-                </div><!-- .icon-box -->
-            </div><!-- .row -->
-        </div><!-- .container-fluid -->
+                    </footer><!-- .entry-footer
+                </div><!-- .icon-box
+            </div><!-- .row
+        </div><!-- .container-fluid
     </div><!-- .icon-boxes -->
 
   <!--  <section class="featured-courses horizontal-column courses-wrap">
@@ -200,12 +200,10 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
             <div class="row">
                 <div class="col-12 col-lg-12 align-content-lg-stretch">
                     <header class="heading">
-                        <h2 class="entry-title">About Ezuca</h2>
+                        <h2 class="entry-title">About LearningThis</h2>
 
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
-                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        <p>Learning This adalah sebuah portal belajar pemrograman gratis. Mengedepankan kualitas pembelajaran
+                          sehingga kualitas sangat terjamin.
                         </p>
                     </header><!-- .heading -->
 
@@ -281,7 +279,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                                 <figure class="course-thumbnail">
                                     <a href="<?= $value['title'] ?>.php?id=<?=$value['id_course'] ?>"><img src="<?php echo "../images/".$value['photo']; ?>" alt=""></a>
                                 </figure><!-- .course-thumbnail -->
-                                
+
                                 <div class="course-content-wrap">
                                     <header class="entry-header">
                                         <h2 class="entry-title"><a href="<?= $value['title'] ?>.php?id=<?=$value['id_course'] ?>"><?php echo $value['title']; ?></a></h2>
@@ -346,7 +344,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                             <div class="event-location"><i class="fa fa-map-marker"></i>40 Baria Sreet 133/2 NewYork City, US</div>
 
                             <div class="event-duration"><i class="fa fa-calendar"></i>10 Dec - 12 dec</div>
-                        </header><!-- .entry-header 
+                        </header><!-- .entry-header
                     </div><!-- .featured-event-content -
                 </div><!-- .col
 

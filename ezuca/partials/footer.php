@@ -2,16 +2,21 @@
     <div class="footer-widgets">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="foot-about">
-                        <a class="foot-logo" href="#"><img style="width:50%;" src="images/logo-polsri.png" alt=""></a>
-
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. </p>
+                <div class="col-xs-12 col-md-4">
+                    <div class="row">
+                      <div class="col-xs-6 col-md-6">
+                          <a class="foot-logo" href="#"><img src="assets/polsri.png" alt=""></a>
+                      </div>
+                      <div class="col-xs-6 col-md-6">
+                        <a class="foot-logo" href="#"><img src="assets/itfest.png" alt=""></a>
+                      </div>
+                    </div>
+                        <p>Polsri ITFest 2018</p>
 
                       <!--  <p class="footer-copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. </p>-->
-                    </div><!-- .foot-about -->
+                  <!--  </div><!-- .foot-about -->
                 </div><!-- .col -->
 
                 <div class="col-xs-12 col-md-4 mt-5 mt-md-0">
@@ -19,9 +24,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                         <h2>Contact Us</h2>
 
                         <ul>
-                            <li>Email: info.deertcreative@gmail.com</li>
-                            <li>Phone: (+88) 111 555 666</li>
-                            <li>Address: 40 Baria Sreet 133/2 NewYork City, US</li>
+                            <li>Email: LearningThis@gmail.com</li>
+                            <li>Phone: 081367988420</li>
                         </ul>
                     </div><!-- .foot-contact -->
                 </div><!-- .col -->
