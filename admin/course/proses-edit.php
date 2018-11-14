@@ -8,14 +8,36 @@
         $thn = $_POST['thn'];
         $date = $thn."-".$bln."-".$tgl;
         $desc = $_POST['description'];
-        $photo = $_POST['photo'];
+        
         $id = $_POST['id'];
+
+        if(!empty($_FILES['photo']['name'])){
+            $photo = $_FILES['photo']['name'];
+            $tempPho = $_FILES['photo']['tmp_name'];
+            $imageSize = $_FILES['photo']['size'];
+            $dir = "../../images/";
+            
+
+            $imgExt = strtolower(pathinfo($photo,PATHINFO_EXTENSION));
+            $valid_extensions = array('jpeg','jpg','png','gif');
+            $pic = rand(1000,1000000).".".$imgExt;
+            $terupload = move_uploaded_file($tempPho,$dir.$pic);
+            if($terupload){
+                echo "upload";
+            }else{
+                echo "not";
+            }
+        }else{
+            echo $_POST['pic'];
+            $pic = $_POST['pic'];
+        }
+        
         
         $sql = "update course set title=:title,author=:author,create_date = :date,description =:desc,photo = :photo where id_course= :id";
             $stmt = $db->prepare($sql);
 
             //bind paramater ke query
-            $params = [":title"=>$title,":author"=>$author,":date"=>$date,":desc"=>$desc,":photo"=>$photo,":id"=>$id];
+            $params = [":title"=>$title,":author"=>$author,":date"=>$date,":desc"=>$desc,":photo"=>$pic,":id"=>$id];
             var_dump($params);
             //eksekusi query untuk menyimpan ke database
             $saved = $stmt->execute($params);
