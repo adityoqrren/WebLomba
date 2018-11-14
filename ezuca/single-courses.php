@@ -11,15 +11,6 @@
                     <div class="col-12">
                         <header class="entry-header">
                             <h1 class="entry-title">The Unreal Engine Developer Course Learn C++ & Make Games</h1>
-
-                            <div class="ratings flex justify-content-center align-items-center">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <span>(4 votes)</span>
-                            </div><!-- .ratings -->
                         </header><!-- .entry-header -->
                     </div><!-- .col -->
                 </div><!-- .row -->
@@ -27,7 +18,7 @@
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
 
-    <div class="container">
+    <div class="container single-courses-cont">
         <div class="row">
             <div class="col-12 offset-lg-1 col-lg-10">
                 <div class="featured-image">
@@ -76,7 +67,7 @@
                         </div><!-- .course-students -->
 
                         <div class="buy-course mt-3">
-                            <a class="btn" href="#">ADD to cart</a>
+                            <a class="btn" href="single-course-enrolled.php">ENROLL</a>
                         </div><!-- .buy-course -->
                     </div><!-- .course-info -->
 
@@ -137,7 +128,6 @@
 
                             <div class="number-of-lectures">340 Lectures</div>
 
-                            <div class="total-lectures-time">42:57:42</div>
                         </header><!-- .entry-header -->
 
                         <div class="entry-contents">
@@ -146,22 +136,21 @@
                                     <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
                                     <span class="lecture-group-title">Introduction to this Course</span>
                                     <span class="number-of-lectures">7 Lectures</span>
-                                    <span class="total-lectures-time">21:29</span>
                                 </h3>
 
                                 <div class="entry-content">
                                     <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><!--<span class="lectures-time text-left text-lg-right">01:39</span></li>-->
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><!--<span class="lectures-time text-left text-lg-right">01:43</span></li>-->
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><!--<span class="lectures-time text-left text-lg-right">07:48</span></li>-->
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><!--<span class="lectures-time text-left text-lg-right">01:39</span></li>-->
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><!--<span class="lectures-time text-left text-lg-right">2 pages</span></li>-->
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><!--<span class="lectures-time text-left text-lg-right">09:40</span></li>-->
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><!--<span class="lectures-time text-left text-lg-right">00:03</span></li>-->
                                     </ul>
                                 </div>
 
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
+                                <!-- <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
                                     <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
                                     <span class="lecture-group-title">Introduction to Front End Development</span>
                                     <span class="number-of-lectures">4 Lectures</span>
@@ -406,7 +395,7 @@
                                         <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
                                         <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div><!-- .entry-contents -->
                     </div><!-- .single-course-accordion-cont  -->
@@ -420,23 +409,23 @@
                             <div class="instructors-stats">
                                 <img src="images/instructor.jpg" alt="">
 
-                                <ul class="p-0 m-0 mt-3">
+                              <!--  <ul class="p-0 m-0 mt-3">
                                    <li><i class="fa fa-star"></i> 4.7 .7 Average rating</li>
                                     <li><i class="fa fa-comment"></i> 25,182 Reviews</li>
                                     <li><i class="fa fa-user"></i> 11,085 Students</li>
                                     <li><i class="fa fa-play-circle"></i> 2 Courses</li>
-                                </ul>
+                                </ul>-->
                             </div><!-- .instructors-stats -->
 
                             <div class="instructors-details">
-                                <div class="ratings flex align-items-center">
+                              <!--  <div class="ratings flex align-items-center">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star-o"></i>
                                     <span> (4 votes)</span>
-                                </div><!-- .ratings -->
+                                </div>--><!-- .ratings -->
 
                                 <h2 class="entry-title mt-3">The Unreal Engine Developer Course Learn C++ & Make Games</h2>
 
@@ -537,35 +526,9 @@
         </div><!-- .row -->
     </div><!-- .container -->
 
-  <!--  <div class="clients-logo">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 flex flex-wrap justify-content-center justify-content-lg-between align-items-center">
-                    <div class="logo-wrap">
-                        <img src="images/logo-1.png" alt="">
-                    </div><!-- .logo-wrap
+    <?php include("partials/logo.php") ?>
 
-                    <div class="logo-wrap">
-                        <img src="images/logo-2.png" alt="">
-                    </div><!-- .logo-wrap
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-3.png" alt="">
-                    </div><!-- .logo-wrap
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-4.png" alt="">
-                    </div><!-- .logo-wrap
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-5.png" alt="">
-                    </div><!-- .logo-wrap
-                </div><!-- .col
-            </div><!-- .row
-        </div><!-- .container 
-    </div><!-- .clients-logo -->
-
-  <?php include("partials/footer"); ?>
+  <?php include("partials/footer.php"); ?>
 
     <script type='text/javascript' src='js/jquery.js'></script>
     <script type='text/javascript' src='js/swiper.min.js'></script>
