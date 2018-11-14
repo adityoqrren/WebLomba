@@ -141,278 +141,35 @@
                         <header class="entry-header flex flex-wrap justify-content-between align-items-center">
                             <h2>Curriculum For This Course</h2>
 
-                            <div class="number-of-lectures">340 Lectures</div>
-
-                            <div class="total-lectures-time">42:57:42</div>
+                            
                         </header><!-- .entry-header -->
 
                         <div class="entry-contents">
                             <div class="accordion-wrap type-accordion">
+                                <?php
+                                    $sql = $db->query("select * from curriculum where course_id = $id");
+                                    while($cur = $sql->fetch(PDO::FETCH_ASSOC)){
+                                ?>
                                 <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center active">
                                     <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Introduction to this Course</span>
-                                    <span class="number-of-lectures">7 Lectures</span>
-                                    <span class="total-lectures-time">21:29</span>
+                                    <span class="lecture-group-title"><?php echo $cur['title'] ?></span>
+                                    <span class="number-of-lectures"></span>
+                                    <span class="total-lectures-time"></span>
                                 </h3>
-
+                                        
                                 <div class="entry-content">
                                     <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
+                                        <?php
+                                        $idt = $cur['id_cur'];
+                                            $sql2 = $db->query("select * from materi where curriculum_id = $idt");
+                                            while($materi = $sql2->fetch(PDO::FETCH_ASSOC)){
+                                        ?>
+                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title"><?php echo $materi['title'] ?></span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right"></span></li>
+                                            <?php } ?>
                                     </ul>
                                 </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Introduction to Front End Development</span>
-                                    <span class="number-of-lectures">4 Lectures</span>
-                                    <span class="total-lectures-time">26:45</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap align-items-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Introduction to HTML	</span>
-                                    <span class="number-of-lectures">12 Lectures</span>
-                                    <span class="total-lectures-time">58:36</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Intermediate HTML</span>
-                                    <span class="number-of-lectures">12 Lectures</span>
-                                    <span class="total-lectures-time">01:12</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Introduction to this Course</span>
-                                    <span class="number-of-lectures">7 Lectures</span>
-                                    <span class="total-lectures-time">21:29</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Introduction to CSS</span>
-                                    <span class="number-of-lectures">12 Lectures</span>
-                                    <span class="total-lectures-time">01:39</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Intermediate CSS</span>
-                                    <span class="number-of-lectures">16 Lectures</span>
-                                    <span class="total-lectures-time">01:25</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Bootstrap</span>
-                                    <span class="number-of-lectures">16 Lectures</span>
-                                    <span class="total-lectures-time">01:59</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Introduction to JavaScript</span>
-                                    <span class="number-of-lectures">12 Lectures</span>
-                                    <span class="total-lectures-time">56:21</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">DOM Manipulation</span>
-                                    <span class="number-of-lectures">13 Lectures</span>
-                                    <span class="total-lectures-time">01:15</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Color Game Project</span>
-                                    <span class="number-of-lectures">10 Lectures</span>
-                                    <span class="total-lectures-time">01:47</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Intro to jQuery</span>
-                                    <span class="number-of-lectures">9 Lectures</span>
-                                    <span class="total-lectures-time">01:09</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Advanced jQuery</span>
-                                    <span class="number-of-lectures">5 Lectures</span>
-                                    <span class="total-lectures-time">34:34</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
-
-                                <h3 class="entry-title flex flex-wrap justify-content-between align-items-lg-center">
-                                    <span class="arrow-r"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <span class="lecture-group-title">Data Associations</span>
-                                    <span class="number-of-lectures">4 Lectures</span>
-                                    <span class="total-lectures-time">38:07</span>
-                                </h3>
-
-                                <div class="entry-content">
-                                    <ul class="p-0 m-0">
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">A Note On Asking For Help</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Introducing Our TA</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">01:43</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Our Class Chat Room</span><span class="lectures-preview"></span><span class="lectures-time text-left text-lg-right">07:48</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Why This Course?</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">01:39</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Download</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">2 pages</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Syllabus Walkthrough</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">09:40</span></li>
-                                        <li class="flex flex-column flex-lg-row align-items-lg-center"><span class="lecture-title">Lecture Slides</span><span class="lectures-preview">Preview</span><span class="lectures-time text-left text-lg-right">00:03</span></li>
-                                    </ul>
-                                </div>
+                                    <?php } ?>
+                                
                             </div>
                         </div><!-- .entry-contents -->
                     </div><!-- .single-course-accordion-cont  -->

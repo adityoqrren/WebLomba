@@ -30,7 +30,7 @@
                                     }else{
                                     ?>
                                         <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-                                        <li><a href="#"><?php echo $_SESSION["user"]["name"];  ?></a></li>
+                                        <li><a href="about.html"><?php echo $_SESSION["user"]["name"];  ?></a></li>
                                         </ul>
 
                                     <?php
