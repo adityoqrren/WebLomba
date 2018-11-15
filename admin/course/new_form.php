@@ -1,4 +1,4 @@
-<?php include("config.php") ?>
+<?php include("../config.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include("partials/head.php") ?>
@@ -23,16 +23,21 @@
                     <li class="breadcrumb-item active">New Course</li>
                 </ol>
 
-                <?php if ($_GET['status']=="sukses"){ ?>
-				<div class="alert alert-success" role="alert">
-                    <?php echo "input sukses";?>
-                </div>
-                <?php }else if($_GET['status']=="gagal"){ ?>
-                <div class="alert alert-failed" role="alert">
-                    <?php echo "input gagal";?>
-                </div>
-                        
-                    <?php } ?>
+                <?php
+								if(isset($_GET['status'])){
+									if ($_GET['status']=="sukses"){
+								?>
+									<div class="alert alert-success" role="alert">
+	                    <?php echo "input sukses";?>
+	                </div>
+
+	                <?php }
+									else if($_GET['status']=="gagal"){ ?>
+	                <div class="alert alert-failed" role="alert">
+	                    <?php echo "input gagal";?>
+	                </div>
+
+                    <?php } } ?>
 
                 <div class="card mb-3">
                 <div class="card-header">
@@ -46,21 +51,21 @@
 								<label for="title">Title*</label>
 								<input class="form-control "
 								 type="text" name="title" placeholder="Course Title" />
-								
+
                             </div>
                             <div class="form-group">
 								<label for="title">Author*</label>
 								<input class="form-control "
 								 type="text" name="author" placeholder="Course Author" />
-								
+
                             </div>
-                            
+
                             <div class="form-group">
 								<label for="updated_at">Waktu*</label>
 								<select class="form-control "
 								 name="tgl">
 									 <?php
-									 	for ($i=1; $i <= 31 ; $i++) { 
+									 	for ($i=1; $i <= 31 ; $i++) {
 											 echo "<option value='$i'>$i</option>";
 										 }
 									 ?>
@@ -68,7 +73,7 @@
 								<select class="form-control "
 								 name="bln">
 									 <?php
-									 	for ($i=1; $i <= 12 ; $i++) { 
+									 	for ($i=1; $i <= 12 ; $i++) {
 											 echo "<option value='$i'>$i</option>";
 										 }
 									 ?>
@@ -76,27 +81,27 @@
 								<select class="form-control <"
 								 name="thn">
 									 <?php
-									 	for ($i=2020; $i >= 2000 ; $i--) { 
+									 	for ($i=2020; $i >= 2000 ; $i--) {
 											 echo "<option value='$i'>$i</option>";
 										 }
 									 ?>
 								</select>
-								
+
 							</div>
                             <div class="form-group">
 								<label for="name">Description*</label>
 								<textarea class="form-control"
 								 name="description" placeholder="Event description..."></textarea>
-								
+
 							</div>
-                            
+
                             <div class="form-group">
 								<label for="photo">Photo</label>
 								<input class="form-control-file "
 								 type="file" name="photo" />
-								
+
 							</div>
-                            
+
                             <input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>
 
@@ -131,11 +136,3 @@
 </body>
 
 </html>
-
-
-
-
-							
-									
-								
-   

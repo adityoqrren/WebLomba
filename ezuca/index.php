@@ -6,6 +6,15 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
 <html lang="en">
 <?php include("partials/head.php"); include("../config.php") ?>
 <body>
+<script>
+$(document).ready(function(){
+  $("#stc").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#course-content").offset().top
+    }, 2000);
+  });
+});
+</script>
 <?php include("partials/nav.php") ?>
 
         <div class="hero-content-overlay">
@@ -19,11 +28,11 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
                             </header><!-- .entry-header -->
 
                             <div class="entry-content">
-                                <p>Bergabunglah Bersama Kami untuk belajar kapapun dan dimanapun secara gratis</p>
+                                <p>Bergabunglah bersama Kami untuk belajar kapapun dan dimanapun secara gratis</p>
                             </div><!-- .entry-content -->
 
                             <footer class="entry-footer read-more">
-                                <a href="#">JOIN</a>
+                                <a href="#course-content" id="stc">Start Learning</a>
                             </footer><!-- .entry-footer -->
                         </div><!-- .hero-content-wrap -->
                     </div><!-- .col -->
@@ -86,7 +95,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
 
                     <footer class="entry-footer read-more">
                         <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
-                    </footer><!-- .entry-footer -->
+                    </footer><!-- .entry-footer
                 </div><!-- .icon-box
 
                 <div class="icon-box">
@@ -248,7 +257,7 @@ if(!isset($_SESSION["user"])) header("location: ../login-register/login.php");*/
 
 
     <section class="featured-courses vertical-column courses-wrap">
-        <div class="container">
+        <div class="container" id="course-content">
             <div class="row mx-m-25">
               <div class="col-md-12 text-center">
                 <h2 class="entry-title">Featured Courses</h2>

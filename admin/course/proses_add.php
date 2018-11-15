@@ -13,7 +13,7 @@
         $tempPho = $_FILES['photo']['tmp_name'];
         $imageSize = $_FILES['photo']['size'];
         $dir = "../../images/";
-        
+
 
         $imgExt = strtolower(pathinfo($photo,PATHINFO_EXTENSION));
         $valid_extensions = array('jpeg','jpg','png','gif');
@@ -24,14 +24,14 @@
         }else{
             echo "not";
         }
-        
-        
+
+
             $sql = "insert into course(title,author,create_date,description,photo) values(:title,:author,:date,:desc,:photo)";
             $stmt = $db->prepare($sql);
 
             //bind paramater ke query
             $params = [":title"=>$title,":author"=>$author,":date"=>$date,":desc"=>$desc,":photo"=>$pic];
-        
+
             //eksekusi query untuk menyimpan ke database
             $saved = $stmt->execute($params);
 
@@ -41,7 +41,7 @@
                 header("location: new_form.php?status=gagal");
             }
 
-        
+
     }else{
         die("Forbidden");
     }
