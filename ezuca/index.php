@@ -16,7 +16,6 @@ $(document).ready(function(){
 });
 </script>
 <?php include("partials/nav.php") ?>
-<!--Hallooo-->
 
         <div class="hero-content-overlay">
             <div class="container">
@@ -478,11 +477,12 @@ $(document).ready(function(){
     <?php include("partials/logo.php") ?>
       <?php include("partials/footer.php") ?>
 
-<script type='text/javascript' src='js/jquery.js'></script>
+<script type="text/javascript" src='js/jquery.js'></script>
 <script type='text/javascript' src='js/swiper.min.js'></script>
 <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
 <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
 <script type='text/javascript' src='js/custom.js'></script>
+<script type='text/javascript' src='js/bootstrap.js'></script>
 
 </body>
 </html>
