@@ -32,7 +32,7 @@
             </div><!-- .col -->
                   <?php $i = $i+1;} ?>
             <div class="col-md-12 col-lg-12">
-              <form class="" action="#" method="post">
+              <form class="" action="proses-jawaban.php" method="post">
                 <h4>Question</h4>
                 <div class="row">
 
@@ -53,13 +53,13 @@
                           while($value4 = $sql4->fetch(PDO::FETCH_ASSOC)){
                       ?>
                       <div class="col-md-3">
-                        <input type="radio" value="<?=$value4['pil']?>" name="jawaban_no1"><?=$value4['pil'].". ".$value4['isiPil']?>
+                        <input type="radio" value="<?=$value4['pil']?>" name="<?="no".$j?>"><?=$value4['pil'].". ".$value4['isiPil']?>
                       </div>
                           <?php } ?>
                     <!-- </div> -->
                   </div>
                       <?php $j = $j+1; }?>
-                  
+                      <input type="submit" name="submit" value="submit">
               </form>
 
               </div>
