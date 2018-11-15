@@ -3,12 +3,12 @@
 <?php include("partials/head.php"); include("../config.php") ?>
 <body class="about-page">
     <div class="page-header">
-        
+
         <header class="site-header">
             <header class="site-header">
             <?php include("partials/navcourses.php") ?>
 
-                
+
             </header><!-- .site-header -->
         </header><!-- .site-header -->
 
@@ -40,190 +40,53 @@
         <div class="row">
             <div class="col-12">
                 <div class="about-heading">
-                    <h2 class="entry-title">Welcome to Ezuca</h2>
+                    <h2 class="entry-title">Welcome to LearningTHIS</h2>
 
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                    <p>LearningTHIS adalah portal belajar online di Indonesia yang menyediakan berbagai kursus gratis
+                    terutama di bidang computer science</p>
                 </div><!-- .about-heading -->
             </div><!-- .col -->
 
             <div class="col-12 col-lg-6">
                 <div class="about-stories">
-                    <h3>Our Stories</h3>
+                    <h3>Bagaimana LearningThis Berawal?</h3>
+                    <p>Ide untuk membuat LearningTHIS berawal dari
+                    keinginan untuk membantu teman - teman yang kesulitan
+                    mencari referensi belajar yang bagus. Kalaupun ada, biasanya
+                  berbahasa Inggris dan beberapa harus membayar. Kami ingin membuat portal
+                belajar computer science bahasa Indonesia dengan konten yang tak kalah berkualitas.</p>
 
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis eros lobortis, vestibulum turpis ac, pulvinar odio. </p>
-
-                    <ul class="p-0 m-0 green-ticked">
-                        <li>Learning program with after-school</li>
-                        <li>Positive learning environment</li>
-                        <li>Learning through play</li>
-                    </ul><!-- .green-ticked -->
+              <p>Kami juga ingin berkontribusi dalam memajukan teknologi di Indonesia </p>
                 </div><!-- .about-stories -->
             </div><!-- .col -->
 
             <div class="col-12 col-lg-6">
                 <div class="about-values">
-                    <h3>Our Stories</h3>
-
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis eros lobortis, vestibulum turpis ac, pulvinar odio. </p>
-
+                    <h3>Keunggulan Kami</h3>
                     <ul class="p-0 m-0 green-ticked">
-                        <li>Learning program with after-school</li>
-                        <li>Positive learning environment</li>
-                        <li>Learning through play</li>
+                        <li>Konten berkualitas dan berbahasa Indonesia</li>
+                        <li>100% Gratis</li>
+                        <li>Belajar dan menjawab pertanyaan langsung dengan skor</li>
                     </ul><!-- .green-ticked -->
                 </div><!-- .about-values -->
             </div><!-- .col -->
         </div><!-- .row -->
     </div><!-- .container -->
 
-    <section class="about-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-6 align-content-lg-stretch">
-                    <header class="heading">
-                        <h2 class="entry-title">About Ezuca</h2>
-
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-                    </header><!-- .heading -->
-
-                    <div class="entry-content ezuca-stats">
-                        <div class="stats-wrap flex flex-wrap justify-content-lg-between">
-                            <div class="stats-count">
-                                50<span>M+</span>
-                                <p>STUDENTS LEARNING</p>
-                            </div><!-- .stats-count -->
-
-                            <div class="stats-count">
-                                30<span>K+</span>
-                                <p>ACTIVE COURSES</p>
-                            </div><!-- .stats-count -->
-
-                            <div class="stats-count">
-                                340<span>M+</span>
-                                <p>INSTRUCTORS ONLINE</p>
-                            </div><!-- .stats-count -->
-
-                            <div class="stats-count">
-                                20<span>+</span>
-                                <p>Country Reached</p>
-                            </div><!-- .stats-count -->
-                        </div><!-- .stats-wrap -->
-                    </div><!-- .ezuca-stats -->
-                </div><!-- .col -->
-
-                <div class="col-12 col-lg-6 flex align-content-center mt-5 mt-lg-0">
-                    <div class="ezuca-video position-relative">
-                        <div class="video-play-btn position-absolute">
-                            <img src="images/video-icon.png" alt="Video Play">
-                        </div><!-- .video-play-btn -->
-
-                        <img src="images/video-screenshot.png" alt="">
-                    </div><!-- .ezuca-video -->
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .container -->
-    </section><!-- .about-section -->
-
-    <section class="testimonial-section">
-        <!-- Swiper -->
-        <div class="swiper-container testimonial-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 order-2 order-lg-1 flex align-items-center mt-5 mt-lg-0">
-                                <figure class="user-avatar">
-                                    <img src="images/user-1.jpg" alt="">
-                                </figure><!-- .user-avatar -->
-                            </div><!-- .col -->
-
-                            <div class="col-12 col-lg-6 order-1 order-lg-2 content-wrap h-100">
-                                <div class="entry-content">
-                                    <p>Together as teachers, students and universities we can help make this education available for everyone.</p>
-                                </div><!-- .entry-content -->
-
-                                <div class="entry-footer">
-                                    <h3 class="testimonial-user">Russell Stephens - <span>University in UK</span></h3>
-                                </div><!-- .entry-footer -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                    </div><!-- .container -->
-                </div><!-- .swiper-slide -->
-
-                <div class="swiper-slide">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 order-2 order-lg-1 flex align-items-center mt-5 mt-lg-0">
-                                <figure class="user-avatar">
-                                    <img src="images/user-2.jpg" alt="">
-                                </figure><!-- .user-avatar -->
-                            </div><!-- .col -->
-
-                            <div class="col-12 col-lg-6 order-1 order-lg-2 content-wrap h-100">
-                                <div class="entry-content">
-                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div><!-- .entry-content -->
-
-                                <div class="entry-footer">
-                                    <h3 class="testimonial-user">Robert Stephens - <span>University in Oxford</span></h3>
-                                </div><!-- .entry-footer -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                    </div><!-- .container -->
-                </div><!-- .swiper-slide -->
-
-                <div class="swiper-slide">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 flex order-2 order-lg-1 align-items-center mt-5 mt-lg-0">
-                                <figure class="user-avatar">
-                                    <img src="images/user-3.jpg" alt="">
-                                </figure><!-- .user-avatar -->
-                            </div><!-- .col -->
-
-                            <div class="col-12 col-lg-6 order-1 order-lg-2 content-wrap h-100">
-                                <div class="entry-content">
-                                    <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                                </div><!-- .entry-content -->
-
-                                <div class="entry-footer">
-                                    <h3 class="testimonial-user">James Stephens - <span>University in Cambridge</span></h3>
-                                </div><!-- .entry-footer -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                    </div><!-- .container -->
-                </div><!-- .swiper-slide -->
-            </div><!-- .swiper-wrapper -->
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-6 mt-5 mt-lg-0">
-                        <div class="swiper-pagination position-relative flex justify-content-center align-items-center"></div>
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .testimonial-slider -->
-    </section><!-- .testimonial-section -->
-
-    <div class="container">
+    <div class="container mb-3">
         <div class="row">
             <div class="col-12">
                 <div class="team-heading">
                     <h2 class="entry-title">Meet Our Team</h2>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
                 </div><!-- .team-heading -->
             </div><!-- .col -->
 
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-6">
                 <div class="team-member">
-                    <img src="images/team-1.jpg" alt="">
+                    <img src="assets/profil.jpg" alt="">
 
-                    <h3>Mr. John Wick</h3>
-                    <h4>Materials</h4>
+                    <h3>Ahmad Emir Fatah </h3>
+                    <h4>Back End Developer and Database Designer</h4>
 
                     <ul class="p-0 m-0 d-flex justify-content-center align-items-center">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -233,12 +96,12 @@
                 </div><!-- .team-member -->
             </div><!-- .col -->
 
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-6">
                 <div class="team-member">
-                    <img src="images/team-2.jpg" alt="">
+                    <img src="assets/profil2.jpg" alt="">
 
-                    <h3>Michelle Golden</h3>
-                    <h4>WordPress</h4>
+                    <h3>Adityo Aji Pambudi</h3>
+                    <h4>Front End Developer and Content Manager</h4>
 
                     <ul class="p-0 m-0 d-flex justify-content-center align-items-center">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -248,7 +111,7 @@
                 </div><!-- .team-member -->
             </div><!-- .col -->
 
-            <div class="col-12 col-md-6 col-lg-3">
+            <!-- <div class="col-12 col-md-6 col-lg-4">
                 <div class="team-member">
                     <img src="images/team-3.jpg" alt="">
 
@@ -260,10 +123,10 @@
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     </ul>
-                </div><!-- .team-member -->
+                </div><!-- .team-member
             </div><!-- .col -->
 
-            <div class="col-12 col-md-6 col-lg-3">
+            <!-- <div class="col-12 col-md-6 col-lg-3">
                 <div class="team-member">
                     <img src="images/team-4.jpg" alt="">
 
@@ -275,41 +138,14 @@
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     </ul>
-                </div><!-- .team-member -->
-            </div><!-- .col -->
+                </div>
+                <!-- .team-member
+            </div> -->
+            <!-- .col -->
         </div><!-- .row -->
     </div><!-- .container -->
 
-    <div class="clients-logo">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 flex flex-wrap justify-content-center justify-content-lg-between align-items-center">
-                    <div class="logo-wrap">
-                        <img src="images/logo-1.png" alt="">
-                    </div><!-- .logo-wrap -->
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-2.png" alt="">
-                    </div><!-- .logo-wrap -->
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-3.png" alt="">
-                    </div><!-- .logo-wrap -->
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-4.png" alt="">
-                    </div><!-- .logo-wrap -->
-
-                    <div class="logo-wrap">
-                        <img src="images/logo-5.png" alt="">
-                    </div><!-- .logo-wrap -->
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .container -->
-    </div><!-- .clients-logo -->
-
-    
-        
+    <?php include("partials/logo.php"); ?>
     <?php include("partials/footer.php") ?>
     <script type='text/javascript' src='js/jquery.js'></script>
     <script type='text/javascript' src='js/swiper.min.js'></script>

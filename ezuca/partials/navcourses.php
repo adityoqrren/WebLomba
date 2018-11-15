@@ -32,9 +32,14 @@
                         <?php
                             }else{
                                ?>
-                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-                                <li><a href="about.php"><?php echo $_SESSION["user"]["name"];  ?></a></li>
-                                </ul>
+                               <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                 <li class="dropdown"><a href="#"><?php echo $_SESSION["user"]["name"]; ?></a>
+                                     <ul class="isi-dropdown">
+                                       <li><a href="single-profile.php">Profile</a></li>
+                                       <li><a href="#">Logout</a></li>
+                                     </ul>
+                                 </li>
+                               </ul>
 
                                <?php
                             }
