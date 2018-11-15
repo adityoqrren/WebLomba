@@ -16,6 +16,7 @@ $(document).ready(function(){
 });
 </script>
 <?php include("partials/nav.php") ?>
+<!--Hallooo-->
 
         <div class="hero-content-overlay">
             <div class="container">
